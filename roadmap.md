@@ -4,4 +4,4 @@
 - [x] Academic menu: embed academia trainer portal (github.com/Pallavi-web00/academia-trainer-portal)
 - [x] Import admit-academy repo into this project
 - [x] Restyle shell + home dashboard after the Solvik reference (demo.codeandchill.store/solvik)
-- [ ] Optional: convert embedded module workspaces (Admin, Finance, Academic, etc.) to the dark glass look
+- [x] Convert all module workspaces (Admin, Finance, Academic, Admission, Marketing, HR, Directors) to the dark glass colours

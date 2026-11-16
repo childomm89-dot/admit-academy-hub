@@ -169,7 +169,7 @@
     color-scheme: light !important;
   }
   .finance-module {
-    background: #fff !important;
+    background: oklch(0.270 0.012 160.0 / 0.8) !important;
     background-image: none !important;
     background-attachment: scroll !important;
   }
@@ -308,13 +308,13 @@
   border-color: rgba(76, 127, 161, 0.42);
 }
 .finance-module .dashboard-glass-card {
-  background-color: rgba(255, 255, 255, 0.88);
+  background-color: oklch(0.270 0.012 160.0 / 0.704);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 .finance-module .dashboard-chart-plot {
   border-radius: 0.75rem;
-  background-color: rgba(255, 255, 255, 0.76);
+  background-color: oklch(0.270 0.012 160.0 / 0.608);
 }
 .finance-module .dashboard-stat-grid .stat-card:hover,
 .finance-module .dashboard-panels > *:hover,
@@ -349,7 +349,7 @@
   to { opacity: 1; transform: translateY(0); }
 }
 @supports not (backdrop-filter: blur(1px)) {
-  .finance-module .dashboard-glass-card { background-color: #FFFFFF; }
+  .finance-module .dashboard-glass-card { background-color: oklch(0.270 0.012 160.0 / 0.8); }
 }
 @media (prefers-reduced-motion: reduce) {
   .finance-module .dashboard-stat-grid .stat-card,
@@ -383,7 +383,7 @@
     linear-gradient(180deg, #04222B 0%, #0A3D4A 100%);
   background-size: 100% 100%, cover;
   background-repeat: no-repeat;
-  border-right: 1px solid rgba(152, 216, 208, 0.18);
+  border-right: 1px solid oklch(0.740 0.160 186.3 / 0.063);
 }
 .finance-module .finance-menu-panel > button {
   top: 16px;
@@ -393,7 +393,7 @@
   height: 28px;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(152, 216, 208, 0.45);
+  border: 1px solid oklch(0.740 0.160 186.3 / 0.158);
   border-radius: 9999px;
   color: #DCF0EC;
   opacity: 1;
@@ -460,8 +460,8 @@
   .finance-module .financial-report-print {
     width: 100%;
     padding: 0;
-    color: #111;
-    background: #fff;
+    color: oklch(0.905 0.008 120.0);
+    background: oklch(0.270 0.012 160.0 / 0.8);
     box-shadow: none !important;
     border: none !important;
   }
@@ -538,7 +538,7 @@
 }
 .finance-module .receipt-footer-line {
   display: block;
-  border-top: 1px solid #D9D9D9;
+  border-top: 1px solid oklch(1.000 0.000 0.0 / 0.12);
   margin-bottom: 0.3rem;
 }
 .finance-module .receipt-footer-contact { font-weight: 600; }

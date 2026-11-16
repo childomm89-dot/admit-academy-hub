@@ -52,7 +52,7 @@ const frame = "mx-auto w-full max-w-[1720px] px-4 sm:px-6 xl:pl-32 xl:pr-10";
 export function AppShell({
   title,
   children,
-  surface = "paper",
+  surface = "glass",
   header,
 }: {
   title: string;
