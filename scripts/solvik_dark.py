@@ -4,6 +4,8 @@
   python3 scripts/solvik_dark.py remap        -> regenerates src/styles/solvik-remap.css
   python3 scripts/solvik_dark.py css FILE...  -> one-off: rewrites light colours in CSS
                                                  declarations of FILE(s) in place
+  python3 scripts/solvik_dark.py accent [--from=rose|teal|violet] FILE... -> one-off, after `css`: turns rose or teal
+                                                 accents into Solvik lime (status colours kept)
 
 Both use the same property-aware rules: light backgrounds become dark glass,
 dark text becomes light, light borders become faint white lines. Saturated
@@ -127,9 +129,37 @@ def tailwind_palette():
     return pal
 
 def academic_palette():
-    css = (ROOT / "src/modules/academic/academic.css").read_text()
-    block = css.split("}", 1)[0]
-    return {m.group(1): parse_color(m.group(2)) for m in re.finditer(r"--color-([a-z]+-\d+):\s*([^;]+);", block)}
+    """Academic re-themes indigo/violet; under Solvik both follow the lime ramp."""
+    pal = tailwind_palette()
+    return {f"{hue}-{n}": pal[f"lime-{n}"] for hue in ("indigo", "violet")
+            for n in (50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950)}
+
+ACCENT_COLOR_RE = re.compile(r"oklch\([^)]*\)|#[0-9a-fA-F]{3,8}\b|rgba?\([^)]*\)")
+SEMANTIC = re.compile(r"cancel|danger|error|overdue|reject|absent|missed|delete|destructive", re.I)
+LIME_H = 124.0
+
+ACCENT_HUES = {"rose": lambda C, h: C > 0.015 and (h >= 335 or h <= 20),
+               "teal": lambda C, h: C > 0.03 and 165 <= h <= 215,
+               "violet": lambda C, h: C > 0.04 and 250 <= h <= 300}
+
+def accent_css(text, hue="rose"):
+    _rose = ACCENT_HUES[hue]
+    def rule(m):
+        sel, body = m.group(1), m.group(2)
+        if SEMANTIC.search(sel): return m.group(0)
+        out = []
+        for decl in body.split(";"):
+            prop = decl.split(":", 1)[0].strip()
+            if SEMANTIC.search(prop) or ":" not in decl:
+                out.append(decl); continue
+            def swap(cm):
+                c = parse_color(cm.group(0))
+                if not c or not _rose(c[1], c[2]): return cm.group(0)
+                L, C, h, a = c
+                return fmt(max(L, 0.62) if L < 0.5 else L, min(C * 1.5, 0.19), LIME_H, a)
+            out.append(ACCENT_COLOR_RE.sub(swap, decl))
+        return sel + "{" + ";".join(out) + "}"
+    return re.sub(r"([^{}]+)\{([^{}]*)\}", rule, text)
 
 UTIL = {
     "bg": ("background-color", map_bg), "text": ("color", map_text),
@@ -193,6 +223,12 @@ if __name__ == "__main__":
     elif sys.argv[1:2] == ["css"]:
         for f in sys.argv[2:]:
             p = pathlib.Path(f); t = p.read_text(); n = rewrite_css(t)
+            p.write_text(n); print(f, "changed" if n != t else "unchanged")
+    elif sys.argv[1:2] == ["accent"]:
+        args = sys.argv[2:]; hue = "rose"
+        if args and args[0].startswith("--from="): hue = args.pop(0).split("=", 1)[1]
+        for f in args:
+            p = pathlib.Path(f); t = p.read_text(); n = accent_css(t, hue)
             p.write_text(n); print(f, "changed" if n != t else "unchanged")
     else:
         print(__doc__)

@@ -40,7 +40,7 @@ const studentRecordTrend = [
   { month: "Nov", records: 900 },
 ];
 
-const courseDistributionColors = ["#164e63", "#2a9d8f", "#397c9b", "#ba762b", "#218a68"];
+const courseDistributionColors = ["var(--lime)", "var(--sky)", "var(--salmon)", "var(--cream)", "oklch(0.75 0.06 145)"];
 const demoMultimediaStudentCount = 18;
 
 function Dashboard() {
@@ -138,40 +138,41 @@ function Dashboard() {
               >
                 <defs>
                   <linearGradient id="studentRecordFill" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#2A9D8F" stopOpacity={0.18} />
-                    <stop offset="95%" stopColor="#A7E8D0" stopOpacity={0} />
+                    <stop offset="0%" stopColor="var(--lime)" stopOpacity={0.28} />
+                    <stop offset="95%" stopColor="var(--lime)" stopOpacity={0} />
                   </linearGradient>
                 </defs>
-                <CartesianGrid vertical={false} stroke="#E2E8F0" strokeDasharray="4 5" />
+                <CartesianGrid vertical={false} stroke="oklch(1 0 0 / 10%)" strokeDasharray="4 5" />
                 <XAxis
                   dataKey="month"
                   axisLine={false}
                   tickLine={false}
-                  tick={{ fill: "#64748B", fontSize: 11 }}
+                  tick={{ fill: "oklch(0.82 0.012 120 / 72%)", fontSize: 11 }}
                 />
                 <YAxis
                   domain={[0, 1000]}
                   ticks={[0, 250, 500, 750, 1000]}
                   axisLine={false}
                   tickLine={false}
-                  tick={{ fill: "#64748B", fontSize: 10 }}
+                  tick={{ fill: "oklch(0.82 0.012 120 / 72%)", fontSize: 10 }}
                 />
                 <Tooltip
                   contentStyle={{
-                    border: "1px solid #E2E8F0",
+                    border: "1px solid oklch(1 0 0 / 14%)",
                     borderRadius: 12,
-                    boxShadow: "0 8px 24px #17203314",
+                    boxShadow: "0 8px 24px oklch(0 0 0 / 40%)",
+                    background: "oklch(0.27 0.014 160)",
                     fontSize: 12,
                   }}
-                  labelStyle={{ color: "#172033", fontWeight: 700 }}
+                  labelStyle={{ color: "oklch(0.97 0.006 110)", fontWeight: 700 }}
                 />
                 <Area
                   type="natural"
                   dataKey="records"
-                  stroke="#2A9D8F"
+                  stroke="var(--lime)"
                   strokeWidth={2.5}
                   fill="url(#studentRecordFill)"
-                  dot={{ r: 3, fill: "#fff", strokeWidth: 2, stroke: "#2A9D8F" }}
+                  dot={{ r: 3, fill: "oklch(0.22 0.03 135)", strokeWidth: 2, stroke: "var(--lime)" }}
                   activeDot={{ r: 5 }}
                   isAnimationActive
                   animationDuration={1200}
@@ -248,8 +249,8 @@ function Dashboard() {
                         cornerRadius={5}
                         startAngle={90}
                         endAngle={-270}
-                        stroke="#fff"
-                        strokeWidth={1}
+                        stroke="oklch(0.22 0.02 150)"
+                        strokeWidth={2}
                         isAnimationActive
                         animationDuration={900}
                       >
@@ -263,9 +264,10 @@ function Dashboard() {
                       <Tooltip
                         formatter={(value, name) => [value, name]}
                         contentStyle={{
-                          border: "1px solid #E2E8F0",
+                          border: "1px solid oklch(1 0 0 / 14%)",
                           borderRadius: 12,
-                          boxShadow: "0 8px 24px #17203314",
+                          boxShadow: "0 8px 24px oklch(0 0 0 / 40%)",
+                    background: "oklch(0.27 0.014 160)",
                           fontSize: 12,
                         }}
                       />

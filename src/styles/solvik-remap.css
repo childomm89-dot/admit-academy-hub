@@ -25,17 +25,17 @@
 :where(.solvik) .bg-emerald-50\/70 { background-color: oklch(0.740 0.090 166.1 / 0.112); }
 :where(.solvik) .bg-emerald-50\/80 { background-color: oklch(0.740 0.090 166.1 / 0.128); }
 :where(.solvik) .bg-indigo-100 { background-color: oklch(0.740 0.119 272.8 / 0.24); }
-:where(.solvik .academic-module) .bg-indigo-100 { background-color: oklch(0.740 0.102 358.8 / 0.24); }
+:where(.solvik .academic-module) .bg-indigo-100 { background-color: oklch(0.740 0.170 122.3 / 0.16); }
 :where(.solvik) .bg-indigo-50 { background-color: oklch(0.740 0.090 272.3 / 0.16); }
-:where(.solvik .academic-module) .bg-indigo-50 { background-color: oklch(0.740 0.090 359.3 / 0.16); }
+:where(.solvik .academic-module) .bg-indigo-50 { background-color: oklch(0.740 0.108 120.8 / 0.16); }
 :where(.solvik) .bg-indigo-50\/30 { background-color: oklch(0.740 0.090 272.3 / 0.048); }
-:where(.solvik .academic-module) .bg-indigo-50\/30 { background-color: oklch(0.740 0.090 359.3 / 0.048); }
+:where(.solvik .academic-module) .bg-indigo-50\/30 { background-color: oklch(0.740 0.108 120.8 / 0.048); }
 :where(.solvik) .bg-indigo-50\/50 { background-color: oklch(0.740 0.090 272.3 / 0.08); }
-:where(.solvik .academic-module) .bg-indigo-50\/50 { background-color: oklch(0.740 0.090 359.3 / 0.08); }
+:where(.solvik .academic-module) .bg-indigo-50\/50 { background-color: oklch(0.740 0.108 120.8 / 0.08); }
 :where(.solvik) .bg-indigo-50\/60 { background-color: oklch(0.740 0.090 272.3 / 0.096); }
-:where(.solvik .academic-module) .bg-indigo-50\/60 { background-color: oklch(0.740 0.090 359.3 / 0.096); }
+:where(.solvik .academic-module) .bg-indigo-50\/60 { background-color: oklch(0.740 0.108 120.8 / 0.096); }
 :where(.solvik) .bg-indigo-50\/70 { background-color: oklch(0.740 0.090 272.3 / 0.112); }
-:where(.solvik .academic-module) .bg-indigo-50\/70 { background-color: oklch(0.740 0.090 359.3 / 0.112); }
+:where(.solvik .academic-module) .bg-indigo-50\/70 { background-color: oklch(0.740 0.108 120.8 / 0.112); }
 :where(.solvik) .bg-pink-50 { background-color: oklch(0.740 0.090 343.2 / 0.16); }
 :where(.solvik) .bg-purple-50 { background-color: oklch(0.740 0.090 308.3 / 0.16); }
 :where(.solvik) .bg-red-100 { background-color: oklch(0.740 0.112 17.7 / 0.16); }
@@ -62,11 +62,11 @@
 :where(.solvik) .bg-slate-50\/80 { background-color: oklch(1.000 0.000 0.0 / 0.04); }
 :where(.solvik) .bg-slate-50\/90 { background-color: oklch(1.000 0.000 0.0 / 0.045); }
 :where(.solvik) .bg-violet-50 { background-color: oklch(0.740 0.090 293.8 / 0.16); }
-:where(.solvik .academic-module) .bg-violet-50 { background-color: oklch(0.740 0.090 359.3 / 0.16); }
+:where(.solvik .academic-module) .bg-violet-50 { background-color: oklch(0.740 0.108 120.8 / 0.16); }
 :where(.solvik) .bg-violet-50\/50 { background-color: oklch(0.740 0.090 293.8 / 0.08); }
-:where(.solvik .academic-module) .bg-violet-50\/50 { background-color: oklch(0.740 0.090 359.3 / 0.08); }
+:where(.solvik .academic-module) .bg-violet-50\/50 { background-color: oklch(0.740 0.108 120.8 / 0.08); }
 :where(.solvik) .bg-violet-50\/60 { background-color: oklch(0.740 0.090 293.8 / 0.096); }
-:where(.solvik .academic-module) .bg-violet-50\/60 { background-color: oklch(0.740 0.090 359.3 / 0.096); }
+:where(.solvik .academic-module) .bg-violet-50\/60 { background-color: oklch(0.740 0.108 120.8 / 0.096); }
 :where(.solvik) .bg-white { background-color: oklch(0.270 0.012 160.0 / 0.8); }
 :where(.solvik) .bg-white\/15 { background-color: oklch(0.270 0.012 160.0 / 0.12); }
 :where(.solvik) .bg-white\/65 { background-color: oklch(0.270 0.012 160.0 / 0.52); }
@@ -87,11 +87,12 @@
 :where(.solvik) .border-emerald-100 { border-color: oklch(0.740 0.156 163.1 / 0.35); }
 :where(.solvik) .border-emerald-200 { border-color: oklch(0.740 0.160 164.2 / 0.35); }
 :where(.solvik) .border-indigo-100 { border-color: oklch(0.740 0.102 272.8 / 0.35); }
-:where(.solvik .academic-module) .border-indigo-100 { border-color: oklch(0.740 0.087 358.8 / 0.35); }
+:where(.solvik .academic-module) .border-indigo-100 { border-color: oklch(0.740 0.160 122.3 / 0.35); }
 :where(.solvik) .border-indigo-200 { border-color: oklch(0.740 0.160 274.0 / 0.35); }
-:where(.solvik .academic-module) .border-indigo-200 { border-color: oklch(0.740 0.160 1.0 / 0.35); }
+:where(.solvik .academic-module) .border-indigo-200 { border-color: oklch(0.740 0.160 124.3 / 0.35); }
 :where(.solvik) .border-indigo-200\/60 { border-color: oklch(0.740 0.160 274.0 / 0.21); }
-:where(.solvik .academic-module) .border-indigo-200\/60 { border-color: oklch(0.740 0.160 1.0 / 0.21); }
+:where(.solvik .academic-module) .border-indigo-200\/60 { border-color: oklch(0.740 0.160 124.3 / 0.21); }
+:where(.solvik .academic-module) .border-indigo-300 { border-color: oklch(0.740 0.160 126.7 / 0.35); }
 :where(.solvik) .border-red-100 { border-color: oklch(0.740 0.096 17.7 / 0.35); }
 :where(.solvik) .border-red-200 { border-color: oklch(0.740 0.160 18.3 / 0.35); }
 :where(.solvik) .border-rose-100 { border-color: oklch(0.740 0.090 12.6 / 0.35); }
@@ -104,9 +105,9 @@
 :where(.solvik) .border-slate-200\/80 { border-color: oklch(1.000 0.000 0.0 / 0.096); }
 :where(.solvik) .border-slate-300 { border-color: oklch(1.000 0.000 0.0 / 0.12); }
 :where(.solvik) .border-violet-100 { border-color: oklch(0.740 0.087 294.6 / 0.35); }
-:where(.solvik .academic-module) .border-violet-100 { border-color: oklch(0.740 0.087 358.8 / 0.35); }
+:where(.solvik .academic-module) .border-violet-100 { border-color: oklch(0.740 0.160 122.3 / 0.35); }
 :where(.solvik) .border-violet-200 { border-color: oklch(0.740 0.160 293.3 / 0.35); }
-:where(.solvik .academic-module) .border-violet-200 { border-color: oklch(0.740 0.160 1.0 / 0.35); }
+:where(.solvik .academic-module) .border-violet-200 { border-color: oklch(0.740 0.160 124.3 / 0.35); }
 :where(.solvik) .border-white { border-color: oklch(1.000 0.000 0.0 / 0.12); }
 :where(.solvik) .disabled\:bg-slate-100:disabled { background-color: oklch(1.000 0.000 0.0 / 0.05); }
 :where(.solvik) .disabled\:border-slate-200:disabled { border-color: oklch(1.000 0.000 0.0 / 0.12); }
@@ -120,9 +121,9 @@
 :where(.solvik) .focus\:ring-rose-100:focus { --tw-ring-color: oklch(0.740 0.090 12.6 / 0.35); }
 :where(.solvik) .from-rose-50 { --tw-gradient-from: oklch(0.740 0.090 12.4 / 0.16); }
 :where(.solvik) .group:hover .group-hover\:text-indigo-600 { color: oklch(0.765 0.262 277.0); }
-:where(.solvik .academic-module) .group:hover .group-hover\:text-indigo-600 { color: oklch(0.812 0.094 3.9); }
+:where(.solvik .academic-module) .group:hover .group-hover\:text-indigo-600 { color: oklch(0.708 0.200 131.7); }
 :where(.solvik) .group:hover .group-hover\:text-indigo-700 { color: oklch(0.788 0.240 277.0); }
-:where(.solvik .academic-module) .group:hover .group-hover\:text-indigo-700 { color: oklch(0.840 0.076 2.0); }
+:where(.solvik .academic-module) .group:hover .group-hover\:text-indigo-700 { color: oklch(0.757 0.157 131.6); }
 :where(.solvik) .hover\:bg-\[\#D8F2E9\]:hover { background-color: oklch(0.740 0.104 172.9 / 0.16); }
 :where(.solvik) .hover\:bg-\[\#E2E8F0\]:hover { background-color: oklch(1.000 0.000 0.0 / 0.09); }
 :where(.solvik) .hover\:bg-\[\#E8F8F2\]:hover { background-color: oklch(1.000 0.000 0.0 / 0.05); }
@@ -134,11 +135,11 @@
 :where(.solvik) .hover\:bg-emerald-100:hover { background-color: oklch(0.740 0.170 163.1 / 0.16); }
 :where(.solvik) .hover\:bg-emerald-50:hover { background-color: oklch(0.740 0.090 166.1 / 0.16); }
 :where(.solvik) .hover\:bg-indigo-100:hover { background-color: oklch(0.740 0.119 272.8 / 0.24); }
-:where(.solvik .academic-module) .hover\:bg-indigo-100:hover { background-color: oklch(0.740 0.102 358.8 / 0.24); }
+:where(.solvik .academic-module) .hover\:bg-indigo-100:hover { background-color: oklch(0.740 0.170 122.3 / 0.16); }
 :where(.solvik) .hover\:bg-indigo-50:hover { background-color: oklch(0.740 0.090 272.3 / 0.16); }
-:where(.solvik .academic-module) .hover\:bg-indigo-50:hover { background-color: oklch(0.740 0.090 359.3 / 0.16); }
+:where(.solvik .academic-module) .hover\:bg-indigo-50:hover { background-color: oklch(0.740 0.108 120.8 / 0.16); }
 :where(.solvik) .hover\:bg-indigo-50\/40:hover { background-color: oklch(0.740 0.090 272.3 / 0.064); }
-:where(.solvik .academic-module) .hover\:bg-indigo-50\/40:hover { background-color: oklch(0.740 0.090 359.3 / 0.064); }
+:where(.solvik .academic-module) .hover\:bg-indigo-50\/40:hover { background-color: oklch(0.740 0.108 120.8 / 0.064); }
 :where(.solvik) .hover\:bg-red-50:hover { background-color: oklch(0.740 0.090 17.4 / 0.16); }
 :where(.solvik) .hover\:bg-rose-100:hover { background-color: oklch(0.740 0.105 12.6 / 0.16); }
 :where(.solvik) .hover\:bg-rose-50:hover { background-color: oklch(0.740 0.090 12.4 / 0.16); }
@@ -154,11 +155,13 @@
 :where(.solvik) .hover\:bg-white:hover { background-color: oklch(0.270 0.012 160.0 / 0.8); }
 :where(.solvik) .hover\:border-amber-300:hover { border-color: oklch(0.740 0.160 91.6 / 0.35); }
 :where(.solvik) .hover\:border-blue-300:hover { border-color: oklch(0.740 0.160 251.8 / 0.35); }
+:where(.solvik .academic-module) .hover\:border-indigo-300:hover { border-color: oklch(0.740 0.160 126.7 / 0.35); }
+:where(.solvik .academic-module) .hover\:border-indigo-400:hover { border-color: oklch(0.740 0.160 128.8 / 0.35); }
 :where(.solvik) .hover\:border-rose-200:hover { border-color: oklch(0.740 0.160 10.0 / 0.35); }
 :where(.solvik) .hover\:border-rose-300:hover { border-color: oklch(0.740 0.160 11.6 / 0.35); }
 :where(.solvik) .hover\:border-slate-300:hover { border-color: oklch(1.000 0.000 0.0 / 0.12); }
 :where(.solvik) .hover\:text-indigo-800:hover { color: oklch(0.813 0.195 277.4); }
-:where(.solvik .academic-module) .hover\:text-indigo-800:hover { color: oklch(0.856 0.008 120.0); }
+:where(.solvik .academic-module) .hover\:text-indigo-800:hover { color: oklch(0.790 0.124 130.9); }
 :where(.solvik) .hover\:text-rose-800:hover { color: oklch(0.789 0.188 13.7); }
 :where(.solvik) .hover\:text-rose-950:hover { color: oklch(0.866 0.105 12.1); }
 :where(.solvik) .hover\:text-slate-600:hover { color: oklch(0.793 0.008 120.0); }
@@ -172,7 +175,7 @@
 :where(.solvik) .ring-rose-100 { --tw-ring-color: oklch(0.740 0.090 12.6 / 0.35); }
 :where(.solvik) .ring-slate-200 { --tw-ring-color: oklch(1.000 0.000 0.0 / 0.12); }
 :where(.solvik) .ring-violet-200 { --tw-ring-color: oklch(0.740 0.160 293.3 / 0.35); }
-:where(.solvik .academic-module) .ring-violet-200 { --tw-ring-color: oklch(0.740 0.160 1.0 / 0.35); }
+:where(.solvik .academic-module) .ring-violet-200 { --tw-ring-color: oklch(0.740 0.160 124.3 / 0.35); }
 :where(.solvik) .ring-white { --tw-ring-color: oklch(1.000 0.000 0.0 / 0.12); }
 :where(.solvik) .text-\[\#164E63\] { color: oklch(0.813 0.008 120.0); }
 :where(.solvik) .text-\[\#164e63\] { color: oklch(0.813 0.008 120.0); }
@@ -198,21 +201,19 @@
 :where(.solvik) .text-emerald-800 { color: oklch(0.799 0.095 166.9); }
 :where(.solvik) .text-emerald-900 { color: oklch(0.821 0.077 168.9); }
 :where(.solvik) .text-indigo-300 { color: oklch(0.650 0.115 274.7); }
-:where(.solvik .academic-module) .text-indigo-300 { color: oklch(0.671 0.088 3.8); }
 :where(.solvik) .text-indigo-400 { color: oklch(0.697 0.182 276.9); }
-:where(.solvik .academic-module) .text-indigo-400 { color: oklch(0.724 0.138 8.0); }
 :where(.solvik) .text-indigo-500 { color: oklch(0.734 0.233 277.1); }
-:where(.solvik .academic-module) .text-indigo-500 { color: oklch(0.756 0.125 5.5); }
+:where(.solvik .academic-module) .text-indigo-500 { color: oklch(0.657 0.233 130.8); }
 :where(.solvik) .text-indigo-600 { color: oklch(0.765 0.262 277.0); }
-:where(.solvik .academic-module) .text-indigo-600 { color: oklch(0.812 0.094 3.9); }
+:where(.solvik .academic-module) .text-indigo-600 { color: oklch(0.708 0.200 131.7); }
 :where(.solvik) .text-indigo-700 { color: oklch(0.788 0.240 277.0); }
-:where(.solvik .academic-module) .text-indigo-700 { color: oklch(0.840 0.076 2.0); }
+:where(.solvik .academic-module) .text-indigo-700 { color: oklch(0.757 0.157 131.6); }
 :where(.solvik) .text-indigo-800 { color: oklch(0.813 0.195 277.4); }
-:where(.solvik .academic-module) .text-indigo-800 { color: oklch(0.856 0.008 120.0); }
+:where(.solvik .academic-module) .text-indigo-800 { color: oklch(0.790 0.124 130.9); }
 :where(.solvik) .text-indigo-900 { color: oklch(0.829 0.144 278.7); }
-:where(.solvik .academic-module) .text-indigo-900 { color: oklch(0.875 0.008 120.0); }
+:where(.solvik .academic-module) .text-indigo-900 { color: oklch(0.810 0.101 131.1); }
 :where(.solvik) .text-indigo-950 { color: oklch(0.872 0.090 281.3); }
-:where(.solvik .academic-module) .text-indigo-950 { color: oklch(0.892 0.008 120.0); }
+:where(.solvik .academic-module) .text-indigo-950 { color: oklch(0.865 0.072 132.1); }
 :where(.solvik) .text-pink-700 { color: oklch(0.759 0.223 4.0); }
 :where(.solvik) .text-purple-700 { color: oklch(0.772 0.265 301.9); }
 :where(.solvik) .text-red-500 { color: oklch(0.712 0.237 25.3); }
@@ -236,13 +237,13 @@
 :where(.solvik) .text-slate-900 { color: oklch(0.893 0.008 120.0); }
 :where(.solvik) .text-slate-950 { color: oklch(0.926 0.008 120.0); }
 :where(.solvik) .text-violet-500 { color: oklch(0.725 0.250 292.7); }
-:where(.solvik .academic-module) .text-violet-500 { color: oklch(0.756 0.125 5.5); }
+:where(.solvik .academic-module) .text-violet-500 { color: oklch(0.657 0.233 130.8); }
 :where(.solvik) .text-violet-600 { color: oklch(0.753 0.281 293.0); }
-:where(.solvik .academic-module) .text-violet-600 { color: oklch(0.812 0.094 3.9); }
+:where(.solvik .academic-module) .text-violet-600 { color: oklch(0.708 0.200 131.7); }
 :where(.solvik) .text-violet-700 { color: oklch(0.774 0.270 292.6); }
-:where(.solvik .academic-module) .text-violet-700 { color: oklch(0.840 0.076 2.0); }
+:where(.solvik .academic-module) .text-violet-700 { color: oklch(0.757 0.157 131.6); }
 :where(.solvik) .text-violet-900 { color: oklch(0.820 0.189 293.7); }
-:where(.solvik .academic-module) .text-violet-900 { color: oklch(0.875 0.008 120.0); }
+:where(.solvik .academic-module) .text-violet-900 { color: oklch(0.810 0.101 131.1); }
 :where(.solvik) .to-slate-100 { --tw-gradient-to: oklch(1.000 0.000 0.0 / 0.05); }
 :where(.solvik) .to-white { --tw-gradient-to: oklch(0.270 0.012 160.0 / 0.8); }
 :where(.solvik) .via-white { --tw-gradient-via: oklch(0.270 0.012 160.0 / 0.8); }

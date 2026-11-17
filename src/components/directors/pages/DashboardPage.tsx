@@ -13,7 +13,7 @@ import { fmt, isOverdue, money } from "../utils"
 import { Badge, Btn, Card, Progress, priorityTone, statusTone } from "../components/ui"
 import type { Query } from "../links"
 
-const chartColors = ['#8884f2', '#62b879', '#f28b97', '#e9a057', '#65a6c5']
+const chartColors = ['var(--lime)', 'oklch(0.75 0.06 145)', 'var(--salmon)', 'var(--cream)', 'var(--sky)']
 const startOfDay = (date: Date) => new Date(date.getFullYear(), date.getMonth(), date.getDate())
 const dateOnly = (value: string) => new Date(`${value}T00:00:00`)
 const localDateKey = (date: Date) => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`
@@ -206,13 +206,13 @@ export default function DashboardPage() {
             <div className="director-chart director-line-chart">
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={monthlyTrend} margin={{ top: 8, right: 8, left: -22, bottom: 0 }}>
-                  <CartesianGrid stroke="#ececf2" strokeDasharray="3 3" vertical={false} />
-                  <XAxis dataKey="month" tick={{ fontSize: 10, fill: '#858796' }} axisLine={false} tickLine={false} />
-                  <YAxis domain={[70, 95]} tick={{ fontSize: 9, fill: '#858796' }} axisLine={false} tickLine={false} />
+                  <CartesianGrid stroke="oklch(1 0 0 / 10%)" strokeDasharray="3 3" vertical={false} />
+                  <XAxis dataKey="month" tick={{ fontSize: 10, fill: 'oklch(0.82 0.012 120 / 72%)' }} axisLine={false} tickLine={false} />
+                  <YAxis domain={[70, 95]} tick={{ fontSize: 9, fill: 'oklch(0.82 0.012 120 / 72%)' }} axisLine={false} tickLine={false} />
                   <Tooltip />
                   <Legend wrapperStyle={{ fontSize: 10 }} />
-                  <Line type="monotone" dataKey="actual" name="Actual" stroke="#8884f2" strokeWidth={2.5} dot={{ r: 3 }} />
-                  <Line type="monotone" dataKey="target" name="Target" stroke="#62b879" strokeWidth={2} strokeDasharray="5 4" dot={false} />
+                  <Line type="monotone" dataKey="actual" name="Actual" stroke="var(--lime)" strokeWidth={2.5} dot={{ r: 3 }} />
+                  <Line type="monotone" dataKey="target" name="Target" stroke="var(--cream)" strokeWidth={2} strokeDasharray="5 4" dot={false} />
                 </LineChart>
               </ResponsiveContainer>
             </div>
