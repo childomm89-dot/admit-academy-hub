@@ -96,7 +96,7 @@ export const ChangeRequestModal: React.FC<ChangeRequestModalProps> = ({
             {/* Mandatory Reason */}
             <div>
               <label htmlFor="reason" className="block text-xs font-semibold text-slate-800 mb-1.5">
-                Mandatory Reason for Change Request <span className="text-rose-500">*</span>
+                Mandatory Reason for Change Request <span className="text-lime-500">*</span>
               </label>
               <textarea
                 id="reason"
@@ -112,7 +112,7 @@ export const ChangeRequestModal: React.FC<ChangeRequestModalProps> = ({
                 } focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600`}
               />
               {error ? (
-                <p className="mt-1.5 text-xs text-rose-600 font-medium flex items-center gap-1">
+                <p className="mt-1.5 text-xs text-lime-600 font-medium flex items-center gap-1">
                   <AlertCircle className="w-3.5 h-3.5 shrink-0" />
                   {error}
                 </p>

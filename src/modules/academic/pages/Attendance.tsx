@@ -36,7 +36,7 @@ const formatMonth = (date: Date) =>
 const monthKey = (date: Date) => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
 
 const statusStyles: Record<AttendanceStatus, string> = {
-  Present: 'bg-emerald-100 text-emerald-800 border-emerald-200',
+  Present: 'bg-lime-100 text-lime-800 border-lime-200',
   Absent: 'bg-rose-100 text-rose-800 border-rose-200',
   Late: 'bg-amber-100 text-amber-800 border-amber-200',
   Holiday: 'bg-slate-100 text-slate-700 border-slate-200'
@@ -90,7 +90,7 @@ const StatCards: React.FC<{
         label={showPercentages ? 'Total Present %' : 'Total Present'}
         value={showPercentages ? percent('Present') : count('Present')}
         icon={CheckCircle2}
-        tone="bg-emerald-50 text-emerald-700"
+        tone="bg-lime-50 text-lime-700"
       />
       <SummaryCard
         label={showPercentages ? 'Total Late %' : 'Total Late'}
@@ -102,7 +102,7 @@ const StatCards: React.FC<{
         label={showPercentages ? 'Total Absent %' : 'Total Absent'}
         value={showPercentages ? percent('Absent') : count('Absent')}
         icon={XCircle}
-        tone="bg-rose-50 text-rose-700"
+        tone="bg-lime-50 text-lime-700"
       />
       <SummaryCard
         label="Total Holidays"
@@ -122,10 +122,10 @@ const getRecordCounts = (records: AttendanceRecord[], status: AttendanceStatus) 
 
 const getAttendanceTone = (percentage: number) =>
   percentage >= 90
-    ? 'text-emerald-700 bg-emerald-50'
+    ? 'text-lime-700 bg-lime-50'
     : percentage >= 75
       ? 'text-amber-800 bg-amber-50'
-      : 'text-rose-700 bg-rose-50';
+      : 'text-lime-700 bg-lime-50';
 
 export const Attendance: React.FC = () => {
   const { schedules } = useTrainer();
@@ -190,7 +190,7 @@ export const Attendance: React.FC = () => {
     return (
       <div className="space-y-6">
         <div>
-          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-rose-800">
+          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-lime-800">
             <ClipboardClock className="h-4 w-4" />
             Biometric attendance
           </div>
@@ -215,13 +215,13 @@ export const Attendance: React.FC = () => {
               const isTodayScheduled = batch.startDate <= today && batch.scheduledDays.includes(new Date().getDay());
               const overallPercentage = getAttendancePercentage(records);
               return (
-                <article key={batch.id} className="flex flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-2xs transition-all hover:-translate-y-0.5 hover:border-rose-200 hover:shadow-md">
+                <article key={batch.id} className="flex flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-2xs transition-all hover:-translate-y-0.5 hover:border-lime-200 hover:shadow-md">
                   <div className="flex items-start justify-between gap-3">
                     <div className="min-w-0">
                       <h2 className="truncate text-lg font-bold text-slate-900">{batch.batch}</h2>
                       <p className="mt-1 text-xs text-slate-500">{getBatchDaysDescription(batch.batch, batch.scheduledDays)}</p>
                     </div>
-                    <span className="rounded-lg bg-rose-50 p-2 text-rose-800"><Users className="h-4 w-4" /></span>
+                    <span className="rounded-lg bg-lime-50 p-2 text-lime-800"><Users className="h-4 w-4" /></span>
                   </div>
                   <div className="mt-5 grid grid-cols-2 gap-3">
                     <div className="rounded-xl bg-slate-50 p-3">
@@ -243,7 +243,7 @@ export const Attendance: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => changeBatch(batch)}
-                    className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-rose-800 px-4 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-rose-900"
+                    className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-lime-800 px-4 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-lime-900"
                   >
                     <CalendarCheck2 className="h-4 w-4" />
                     View Attendance
@@ -321,7 +321,7 @@ export const Attendance: React.FC = () => {
       <select
         value={statusFilter}
         onChange={(event) => setStatusFilter(event.target.value as StatusFilter)}
-        className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs text-slate-700 outline-none focus:border-rose-400 focus:ring-2 focus:ring-rose-500/10"
+        className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs text-slate-700 outline-none focus:border-lime-400 focus:ring-2 focus:ring-lime-500/10"
       >
         {(['All', 'Present', 'Absent', 'Late', 'Holiday'] as StatusFilter[]).map((status) => (
           <option key={status} value={status}>{status}</option>
@@ -354,7 +354,7 @@ export const Attendance: React.FC = () => {
         <div className="flex flex-wrap items-center gap-2">
           {view === 'monthly' && (
             <>
-              <button type="button" onClick={() => setView('today')} className="rounded-lg border border-rose-200 bg-rose-50 px-3 py-2 text-xs font-semibold text-rose-900 hover:bg-rose-100">
+              <button type="button" onClick={() => setView('today')} className="rounded-lg border border-lime-200 bg-lime-50 px-3 py-2 text-xs font-semibold text-lime-900 hover:bg-lime-100">
                 Today's Attendance
               </button>
               <button type="button" onClick={() => setView('overall')} className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50">
@@ -379,11 +379,11 @@ export const Attendance: React.FC = () => {
         <>
           <div className="flex flex-col gap-1 rounded-2xl border border-slate-200 bg-white p-4 shadow-2xs sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-2">
-              <button type="button" onClick={() => goToMonth(-1)} aria-label="Previous month" className="rounded-lg border border-slate-200 p-2 text-slate-600 hover:bg-rose-50 hover:text-rose-800">
+              <button type="button" onClick={() => goToMonth(-1)} aria-label="Previous month" className="rounded-lg border border-slate-200 p-2 text-slate-600 hover:bg-lime-50 hover:text-lime-800">
                 <ChevronLeft className="h-4 w-4" />
               </button>
               <h3 className="min-w-40 text-center text-sm font-bold text-slate-900">{formatMonth(selectedMonth)}</h3>
-              <button type="button" onClick={() => goToMonth(1)} aria-label="Next month" disabled={monthKey(selectedMonth) === monthKey(currentMonth)} className="rounded-lg border border-slate-200 p-2 text-slate-600 hover:bg-rose-50 hover:text-rose-800 disabled:cursor-not-allowed disabled:opacity-40">
+              <button type="button" onClick={() => goToMonth(1)} aria-label="Next month" disabled={monthKey(selectedMonth) === monthKey(currentMonth)} className="rounded-lg border border-slate-200 p-2 text-slate-600 hover:bg-lime-50 hover:text-lime-800 disabled:cursor-not-allowed disabled:opacity-40">
                 <ChevronRight className="h-4 w-4" />
               </button>
             </div>
@@ -429,13 +429,13 @@ export const Attendance: React.FC = () => {
                       onKeyDown={(event) => {
                         if (event.key === 'Enter' || event.key === ' ') openStudent(student);
                       }}
-                      className={`cursor-pointer transition-colors hover:bg-rose-50/50 focus:bg-rose-50 ${
-                        highlightedStudentId === student.id ? 'bg-rose-50/40' : ''
+                      className={`cursor-pointer transition-colors hover:bg-lime-50/50 focus:bg-lime-50 ${
+                        highlightedStudentId === student.id ? 'bg-lime-50/40' : ''
                       }`}
                     >
                       <td className="px-4 py-3 font-mono-numbers font-semibold text-slate-600">{student.rollNumber}</td>
                       <td className="px-4 py-3 font-semibold text-slate-900">{student.name}</td>
-                      <td className="px-4 py-3 text-center font-mono-numbers text-emerald-700">{present}</td>
+                      <td className="px-4 py-3 text-center font-mono-numbers text-lime-700">{present}</td>
                       <td className="px-4 py-3 text-center font-mono-numbers text-rose-700">{absent}</td>
                       <td className="px-4 py-3 text-right">
                         <span className={`inline-flex min-w-14 justify-center rounded-lg px-2 py-1 font-bold ${getAttendanceTone(percentage)}`}>{percentage}%</span>
@@ -457,7 +457,7 @@ export const Attendance: React.FC = () => {
               <h3 className="text-sm font-bold text-slate-900">Today's Attendance</h3>
               <p className="mt-1 text-xs text-slate-500">{new Date(`${today}T00:00:00`).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}</p>
             </div>
-            <span className="rounded-lg bg-rose-50 px-3 py-2 text-xs font-semibold text-rose-900">{selectedBatch.batch}</span>
+            <span className="rounded-lg bg-lime-50 px-3 py-2 text-xs font-semibold text-lime-900">{selectedBatch.batch}</span>
           </div>
           {!todayIsScheduled ? (
             <div className="rounded-2xl border border-slate-200 bg-white p-10 text-center">
@@ -537,7 +537,7 @@ export const Attendance: React.FC = () => {
                 </select>
               </label>
               <label className="flex items-center gap-2 text-xs text-slate-600">
-                <input type="checkbox" checked={showCompleteHistory} onChange={(event) => setShowCompleteHistory(event.target.checked)} className="accent-rose-800" />
+                <input type="checkbox" checked={showCompleteHistory} onChange={(event) => setShowCompleteHistory(event.target.checked)} className="accent-lime-800" />
                 View complete history
               </label>
             </div>
@@ -545,7 +545,7 @@ export const Attendance: React.FC = () => {
 
           <div className="grid grid-cols-2 gap-3 lg:grid-cols-5">
             <SummaryCard label="Total Students" value={selectedBatch.students.length} icon={Users} tone="bg-slate-100 text-slate-700" />
-            <SummaryCard label="Overall Present" value={getRecordCounts(filteredOverallRecords, 'Present')} icon={CheckCircle2} tone="bg-emerald-50 text-emerald-700" />
+            <SummaryCard label="Overall Present" value={getRecordCounts(filteredOverallRecords, 'Present')} icon={CheckCircle2} tone="bg-lime-50 text-lime-700" />
             <SummaryCard label="Overall Late" value={getRecordCounts(filteredOverallRecords, 'Late')} icon={Clock3} tone="bg-amber-50 text-amber-700" />
             <SummaryCard label="Overall Absent" value={getRecordCounts(filteredOverallRecords, 'Absent')} icon={XCircle} tone="bg-rose-50 text-rose-700" />
             <SummaryCard label="Average Batch Attendance" value={`${averageBatchPercentage}%`} icon={CalendarCheck2} tone="bg-sky-50 text-sky-700" />
@@ -571,7 +571,7 @@ export const Attendance: React.FC = () => {
                   <tr key={row.student.id} className="hover:bg-slate-50/70">
                     <td className="px-4 py-3 font-mono-numbers font-semibold text-slate-600">{row.student.rollNumber}</td>
                     <td className="px-4 py-3 font-semibold text-slate-900">{row.student.name}</td>
-                    <td className="px-4 py-3 text-center font-mono-numbers text-emerald-700">{row.present}</td>
+                    <td className="px-4 py-3 text-center font-mono-numbers text-lime-700">{row.present}</td>
                     <td className="px-4 py-3 text-center font-mono-numbers text-amber-700">{row.late}</td>
                     <td className="px-4 py-3 text-center font-mono-numbers text-rose-700">{row.absent}</td>
                     <td className="px-4 py-3 text-right">
@@ -618,13 +618,13 @@ export const Attendance: React.FC = () => {
           <div className="grid grid-cols-1 gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-2xs sm:grid-cols-4">
             <div className="flex items-center justify-between gap-3 sm:col-span-2">
               <div className="flex items-center gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-rose-50 text-rose-800"><UserRound className="h-5 w-5" /></span>
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-lime-50 text-lime-800"><UserRound className="h-5 w-5" /></span>
                 <div><p className="text-sm font-bold text-slate-900">{selectedStudent.name}</p><p className="mt-0.5 text-xs text-slate-500">{selectedStudent.rollNumber} · {selectedBatch.batch}</p></div>
               </div>
               <button
                 type="button"
                 onClick={() => setProfileStudent(selectedStudent)}
-                className="rounded-lg border border-rose-200 bg-rose-50 px-3 py-2 text-[11px] font-semibold text-rose-800 hover:bg-rose-100"
+                className="rounded-lg border border-lime-200 bg-lime-50 px-3 py-2 text-[11px] font-semibold text-lime-800 hover:bg-lime-100"
               >
                 View Profile
               </button>
@@ -639,9 +639,9 @@ export const Attendance: React.FC = () => {
 
           <div className="flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-2xs sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-2">
-              <button type="button" onClick={() => goToMonth(-1)} aria-label="Previous month" className="rounded-lg border border-slate-200 p-2 text-slate-600 hover:bg-rose-50 hover:text-rose-800"><ChevronLeft className="h-4 w-4" /></button>
+              <button type="button" onClick={() => goToMonth(-1)} aria-label="Previous month" className="rounded-lg border border-slate-200 p-2 text-slate-600 hover:bg-lime-50 hover:text-lime-800"><ChevronLeft className="h-4 w-4" /></button>
               <h3 className="min-w-40 text-center text-sm font-bold text-slate-900">{formatMonth(selectedMonth)}</h3>
-              <button type="button" onClick={() => goToMonth(1)} aria-label="Next month" disabled={monthKey(selectedMonth) === monthKey(currentMonth)} className="rounded-lg border border-slate-200 p-2 text-slate-600 hover:bg-rose-50 hover:text-rose-800 disabled:cursor-not-allowed disabled:opacity-40"><ChevronRight className="h-4 w-4" /></button>
+              <button type="button" onClick={() => goToMonth(1)} aria-label="Next month" disabled={monthKey(selectedMonth) === monthKey(currentMonth)} className="rounded-lg border border-slate-200 p-2 text-slate-600 hover:bg-lime-50 hover:text-lime-800 disabled:cursor-not-allowed disabled:opacity-40"><ChevronRight className="h-4 w-4" /></button>
             </div>
             <p className="text-[11px] text-slate-500">Month summaries use the selected month; Sundays are shown as holidays throughout the year.</p>
           </div>
@@ -678,8 +678,8 @@ export const Attendance: React.FC = () => {
                     const monthlyStudentRecords = allMonthsForStudentYear.filter((record) => record.attendanceDate.startsWith(monthPrefix));
                     const isSelectedMonth = monthIndex === selectedMonth.getMonth();
                     return (
-                      <tr key={name} className={isSelectedMonth ? 'bg-rose-50/50' : 'hover:bg-slate-50/50'}>
-                        <th className={`sticky left-0 z-10 whitespace-nowrap border border-slate-200 px-2.5 py-2 text-left font-semibold ${isSelectedMonth ? 'bg-rose-50 text-rose-900' : 'bg-white text-slate-700'}`}>{name}</th>
+                      <tr key={name} className={isSelectedMonth ? 'bg-lime-50/50' : 'hover:bg-slate-50/50'}>
+                        <th className={`sticky left-0 z-10 whitespace-nowrap border border-slate-200 px-2.5 py-2 text-left font-semibold ${isSelectedMonth ? 'bg-lime-50 text-lime-900' : 'bg-white text-slate-700'}`}>{name}</th>
                         {Array.from({ length: 31 }, (_, index) => {
                           const day = index + 1;
                           if (day > daysInMonth) return <td key={day} className="border border-slate-200 bg-slate-50/50 px-1 py-1" />;
@@ -706,7 +706,7 @@ export const Attendance: React.FC = () => {
                                     ? `Check-in: ${record.checkInTime || 'Unavailable'} · Check-out: ${record.checkOutTime || 'Unavailable'}`
                                     : record.status}
                                   className={`mx-auto flex h-7 w-7 items-center justify-center rounded-md text-[10px] font-bold ${
-                                    record.status === 'Present' ? 'bg-emerald-100 text-emerald-800'
+                                    record.status === 'Present' ? 'bg-lime-100 text-lime-800'
                                       : record.status === 'Late' ? 'bg-amber-100 text-amber-800'
                                         : record.status === 'Absent' ? 'bg-rose-100 text-rose-800'
                                           : 'bg-slate-100 text-slate-700'

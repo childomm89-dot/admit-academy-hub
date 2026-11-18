@@ -18,8 +18,8 @@ export const ToastContainer: React.FC<ToastProps> = ({ toasts, onDismiss }) => {
         let icon = <Info className="w-5 h-5 text-indigo-600 shrink-0" />;
 
         if (toast.type === 'success') {
-          borderClass = 'border-emerald-200';
-          icon = <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />;
+          borderClass = 'border-lime-200';
+          icon = <CheckCircle2 className="w-5 h-5 text-lime-600 shrink-0" />;
         } else if (toast.type === 'error') {
           borderClass = 'border-rose-200';
           icon = <AlertCircle className="w-5 h-5 text-rose-600 shrink-0" />;

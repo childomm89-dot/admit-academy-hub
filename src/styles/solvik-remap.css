@@ -20,10 +20,6 @@
 :where(.solvik) .bg-cyan-50\/60 { background-color: oklch(0.740 0.090 200.9 / 0.096); }
 :where(.solvik) .bg-emerald-100 { background-color: oklch(0.740 0.170 163.1 / 0.16); }
 :where(.solvik) .bg-emerald-50 { background-color: oklch(0.740 0.090 166.1 / 0.16); }
-:where(.solvik) .bg-emerald-50\/50 { background-color: oklch(0.740 0.090 166.1 / 0.08); }
-:where(.solvik) .bg-emerald-50\/60 { background-color: oklch(0.740 0.090 166.1 / 0.096); }
-:where(.solvik) .bg-emerald-50\/70 { background-color: oklch(0.740 0.090 166.1 / 0.112); }
-:where(.solvik) .bg-emerald-50\/80 { background-color: oklch(0.740 0.090 166.1 / 0.128); }
 :where(.solvik) .bg-indigo-100 { background-color: oklch(0.740 0.119 272.8 / 0.24); }
 :where(.solvik .academic-module) .bg-indigo-100 { background-color: oklch(0.740 0.170 122.3 / 0.16); }
 :where(.solvik) .bg-indigo-50 { background-color: oklch(0.740 0.090 272.3 / 0.16); }
@@ -36,19 +32,21 @@
 :where(.solvik .academic-module) .bg-indigo-50\/60 { background-color: oklch(0.740 0.108 120.8 / 0.096); }
 :where(.solvik) .bg-indigo-50\/70 { background-color: oklch(0.740 0.090 272.3 / 0.112); }
 :where(.solvik .academic-module) .bg-indigo-50\/70 { background-color: oklch(0.740 0.108 120.8 / 0.112); }
-:where(.solvik) .bg-pink-50 { background-color: oklch(0.740 0.090 343.2 / 0.16); }
+:where(.solvik) .bg-lime-100 { background-color: oklch(0.740 0.170 122.3 / 0.16); }
+:where(.solvik) .bg-lime-50 { background-color: oklch(0.740 0.108 120.8 / 0.16); }
+:where(.solvik) .bg-lime-50\/30 { background-color: oklch(0.740 0.108 120.8 / 0.048); }
+:where(.solvik) .bg-lime-50\/40 { background-color: oklch(0.740 0.108 120.8 / 0.064); }
+:where(.solvik) .bg-lime-50\/50 { background-color: oklch(0.740 0.108 120.8 / 0.08); }
+:where(.solvik) .bg-lime-50\/60 { background-color: oklch(0.740 0.108 120.8 / 0.096); }
+:where(.solvik) .bg-lime-50\/70 { background-color: oklch(0.740 0.108 120.8 / 0.112); }
+:where(.solvik) .bg-lime-50\/80 { background-color: oklch(0.740 0.108 120.8 / 0.128); }
 :where(.solvik) .bg-purple-50 { background-color: oklch(0.740 0.090 308.3 / 0.16); }
 :where(.solvik) .bg-red-100 { background-color: oklch(0.740 0.112 17.7 / 0.16); }
 :where(.solvik) .bg-red-50 { background-color: oklch(0.740 0.090 17.4 / 0.16); }
 :where(.solvik) .bg-red-50\/50 { background-color: oklch(0.740 0.090 17.4 / 0.08); }
 :where(.solvik) .bg-rose-100 { background-color: oklch(0.740 0.105 12.6 / 0.16); }
 :where(.solvik) .bg-rose-50 { background-color: oklch(0.740 0.090 12.4 / 0.16); }
-:where(.solvik) .bg-rose-50\/30 { background-color: oklch(0.740 0.090 12.4 / 0.048); }
-:where(.solvik) .bg-rose-50\/40 { background-color: oklch(0.740 0.090 12.4 / 0.064); }
 :where(.solvik) .bg-rose-50\/50 { background-color: oklch(0.740 0.090 12.4 / 0.08); }
-:where(.solvik) .bg-rose-50\/60 { background-color: oklch(0.740 0.090 12.4 / 0.096); }
-:where(.solvik) .bg-rose-50\/70 { background-color: oklch(0.740 0.090 12.4 / 0.112); }
-:where(.solvik) .bg-rose-50\/80 { background-color: oklch(0.740 0.090 12.4 / 0.128); }
 :where(.solvik) .bg-sky-50 { background-color: oklch(0.740 0.090 236.6 / 0.16); }
 :where(.solvik) .bg-sky-50\/60 { background-color: oklch(0.740 0.090 236.6 / 0.096); }
 :where(.solvik) .bg-slate-100 { background-color: oklch(1.000 0.000 0.0 / 0.05); }
@@ -85,17 +83,16 @@
 :where(.solvik) .border-blue-100 { border-color: oklch(0.740 0.096 255.6 / 0.35); }
 :where(.solvik) .border-blue-200 { border-color: oklch(0.740 0.160 254.1 / 0.35); }
 :where(.solvik) .border-emerald-100 { border-color: oklch(0.740 0.156 163.1 / 0.35); }
-:where(.solvik) .border-emerald-200 { border-color: oklch(0.740 0.160 164.2 / 0.35); }
 :where(.solvik) .border-indigo-100 { border-color: oklch(0.740 0.102 272.8 / 0.35); }
 :where(.solvik .academic-module) .border-indigo-100 { border-color: oklch(0.740 0.160 122.3 / 0.35); }
 :where(.solvik) .border-indigo-200 { border-color: oklch(0.740 0.160 274.0 / 0.35); }
 :where(.solvik .academic-module) .border-indigo-200 { border-color: oklch(0.740 0.160 124.3 / 0.35); }
-:where(.solvik) .border-indigo-200\/60 { border-color: oklch(0.740 0.160 274.0 / 0.21); }
-:where(.solvik .academic-module) .border-indigo-200\/60 { border-color: oklch(0.740 0.160 124.3 / 0.21); }
 :where(.solvik .academic-module) .border-indigo-300 { border-color: oklch(0.740 0.160 126.7 / 0.35); }
+:where(.solvik) .border-lime-100 { border-color: oklch(0.740 0.160 122.3 / 0.35); }
+:where(.solvik) .border-lime-200 { border-color: oklch(0.740 0.160 124.3 / 0.35); }
+:where(.solvik) .border-lime-300 { border-color: oklch(0.740 0.160 126.7 / 0.35); }
 :where(.solvik) .border-red-100 { border-color: oklch(0.740 0.096 17.7 / 0.35); }
 :where(.solvik) .border-red-200 { border-color: oklch(0.740 0.160 18.3 / 0.35); }
-:where(.solvik) .border-rose-100 { border-color: oklch(0.740 0.090 12.6 / 0.35); }
 :where(.solvik) .border-rose-200 { border-color: oklch(0.740 0.160 10.0 / 0.35); }
 :where(.solvik) .border-rose-300 { border-color: oklch(0.740 0.160 11.6 / 0.35); }
 :where(.solvik) .border-sky-200 { border-color: oklch(0.740 0.160 230.9 / 0.35); }
@@ -115,11 +112,12 @@
 :where(.solvik) .divide-slate-100 > :not(:last-child) { border-color: oklch(1.000 0.000 0.0 / 0.12); }
 :where(.solvik) .fill-green-600 { fill: oklch(0.717 0.194 149.2); }
 :where(.solvik) .fill-red-600 { fill: oklch(0.738 0.245 27.3); }
-:where(.solvik) .focus\:bg-rose-50:focus { background-color: oklch(0.740 0.090 12.4 / 0.16); }
+:where(.solvik) .focus\:bg-lime-50:focus { background-color: oklch(0.740 0.108 120.8 / 0.16); }
 :where(.solvik) .focus\:bg-white:focus { background-color: oklch(0.270 0.012 160.0 / 0.8); }
+:where(.solvik) .focus\:border-lime-400:focus { border-color: oklch(0.740 0.160 128.8 / 0.35); }
 :where(.solvik) .focus\:ring-blue-100:focus { --tw-ring-color: oklch(0.740 0.096 255.6 / 0.35); }
-:where(.solvik) .focus\:ring-rose-100:focus { --tw-ring-color: oklch(0.740 0.090 12.6 / 0.35); }
-:where(.solvik) .from-rose-50 { --tw-gradient-from: oklch(0.740 0.090 12.4 / 0.16); }
+:where(.solvik) .focus\:ring-lime-100:focus { --tw-ring-color: oklch(0.740 0.160 122.3 / 0.35); }
+:where(.solvik) .from-lime-50 { --tw-gradient-from: oklch(0.740 0.108 120.8 / 0.16); }
 :where(.solvik) .group:hover .group-hover\:text-indigo-600 { color: oklch(0.765 0.262 277.0); }
 :where(.solvik .academic-module) .group:hover .group-hover\:text-indigo-600 { color: oklch(0.708 0.200 131.7); }
 :where(.solvik) .group:hover .group-hover\:text-indigo-700 { color: oklch(0.788 0.240 277.0); }
@@ -132,18 +130,16 @@
 :where(.solvik) .hover\:bg-blue-50:hover { background-color: oklch(0.740 0.090 254.6 / 0.16); }
 :where(.solvik) .hover\:bg-blue-50\/30:hover { background-color: oklch(0.740 0.090 254.6 / 0.048); }
 :where(.solvik) .hover\:bg-blue-50\/40:hover { background-color: oklch(0.740 0.090 254.6 / 0.064); }
-:where(.solvik) .hover\:bg-emerald-100:hover { background-color: oklch(0.740 0.170 163.1 / 0.16); }
-:where(.solvik) .hover\:bg-emerald-50:hover { background-color: oklch(0.740 0.090 166.1 / 0.16); }
 :where(.solvik) .hover\:bg-indigo-100:hover { background-color: oklch(0.740 0.119 272.8 / 0.24); }
 :where(.solvik .academic-module) .hover\:bg-indigo-100:hover { background-color: oklch(0.740 0.170 122.3 / 0.16); }
 :where(.solvik) .hover\:bg-indigo-50:hover { background-color: oklch(0.740 0.090 272.3 / 0.16); }
 :where(.solvik .academic-module) .hover\:bg-indigo-50:hover { background-color: oklch(0.740 0.108 120.8 / 0.16); }
 :where(.solvik) .hover\:bg-indigo-50\/40:hover { background-color: oklch(0.740 0.090 272.3 / 0.064); }
 :where(.solvik .academic-module) .hover\:bg-indigo-50\/40:hover { background-color: oklch(0.740 0.108 120.8 / 0.064); }
+:where(.solvik) .hover\:bg-lime-100:hover { background-color: oklch(0.740 0.170 122.3 / 0.16); }
+:where(.solvik) .hover\:bg-lime-50:hover { background-color: oklch(0.740 0.108 120.8 / 0.16); }
+:where(.solvik) .hover\:bg-lime-50\/50:hover { background-color: oklch(0.740 0.108 120.8 / 0.08); }
 :where(.solvik) .hover\:bg-red-50:hover { background-color: oklch(0.740 0.090 17.4 / 0.16); }
-:where(.solvik) .hover\:bg-rose-100:hover { background-color: oklch(0.740 0.105 12.6 / 0.16); }
-:where(.solvik) .hover\:bg-rose-50:hover { background-color: oklch(0.740 0.090 12.4 / 0.16); }
-:where(.solvik) .hover\:bg-rose-50\/50:hover { background-color: oklch(0.740 0.090 12.4 / 0.08); }
 :where(.solvik) .hover\:bg-slate-100:hover { background-color: oklch(1.000 0.000 0.0 / 0.05); }
 :where(.solvik) .hover\:bg-slate-100\/70:hover { background-color: oklch(1.000 0.000 0.0 / 0.035); }
 :where(.solvik) .hover\:bg-slate-200:hover { background-color: oklch(1.000 0.000 0.0 / 0.09); }
@@ -157,26 +153,25 @@
 :where(.solvik) .hover\:border-blue-300:hover { border-color: oklch(0.740 0.160 251.8 / 0.35); }
 :where(.solvik .academic-module) .hover\:border-indigo-300:hover { border-color: oklch(0.740 0.160 126.7 / 0.35); }
 :where(.solvik .academic-module) .hover\:border-indigo-400:hover { border-color: oklch(0.740 0.160 128.8 / 0.35); }
-:where(.solvik) .hover\:border-rose-200:hover { border-color: oklch(0.740 0.160 10.0 / 0.35); }
-:where(.solvik) .hover\:border-rose-300:hover { border-color: oklch(0.740 0.160 11.6 / 0.35); }
+:where(.solvik) .hover\:border-lime-200:hover { border-color: oklch(0.740 0.160 124.3 / 0.35); }
+:where(.solvik) .hover\:border-lime-300:hover { border-color: oklch(0.740 0.160 126.7 / 0.35); }
 :where(.solvik) .hover\:border-slate-300:hover { border-color: oklch(1.000 0.000 0.0 / 0.12); }
 :where(.solvik) .hover\:text-indigo-800:hover { color: oklch(0.813 0.195 277.4); }
 :where(.solvik .academic-module) .hover\:text-indigo-800:hover { color: oklch(0.790 0.124 130.9); }
-:where(.solvik) .hover\:text-rose-800:hover { color: oklch(0.789 0.188 13.7); }
-:where(.solvik) .hover\:text-rose-950:hover { color: oklch(0.866 0.105 12.1); }
+:where(.solvik) .hover\:text-lime-800:hover { color: oklch(0.790 0.124 130.9); }
+:where(.solvik) .hover\:text-lime-950:hover { color: oklch(0.865 0.072 132.1); }
 :where(.solvik) .hover\:text-slate-600:hover { color: oklch(0.793 0.008 120.0); }
 :where(.solvik) .hover\:text-slate-700:hover { color: oklch(0.824 0.008 120.0); }
-:where(.solvik) .hover\:text-slate-800:hover { color: oklch(0.863 0.008 120.0); }
 :where(.solvik) .hover\:text-slate-900:hover { color: oklch(0.893 0.008 120.0); }
 :where(.solvik) .ring-amber-200 { --tw-ring-color: oklch(0.740 0.160 95.7 / 0.35); }
 :where(.solvik) .ring-blue-200 { --tw-ring-color: oklch(0.740 0.160 254.1 / 0.35); }
 :where(.solvik) .ring-emerald-200 { --tw-ring-color: oklch(0.740 0.160 164.2 / 0.35); }
+:where(.solvik) .ring-lime-100 { --tw-ring-color: oklch(0.740 0.160 122.3 / 0.35); }
 :where(.solvik) .ring-red-200 { --tw-ring-color: oklch(0.740 0.160 18.3 / 0.35); }
 :where(.solvik) .ring-rose-100 { --tw-ring-color: oklch(0.740 0.090 12.6 / 0.35); }
 :where(.solvik) .ring-slate-200 { --tw-ring-color: oklch(1.000 0.000 0.0 / 0.12); }
 :where(.solvik) .ring-violet-200 { --tw-ring-color: oklch(0.740 0.160 293.3 / 0.35); }
 :where(.solvik .academic-module) .ring-violet-200 { --tw-ring-color: oklch(0.740 0.160 124.3 / 0.35); }
-:where(.solvik) .ring-white { --tw-ring-color: oklch(1.000 0.000 0.0 / 0.12); }
 :where(.solvik) .text-\[\#164E63\] { color: oklch(0.813 0.008 120.0); }
 :where(.solvik) .text-\[\#164e63\] { color: oklch(0.813 0.008 120.0); }
 :where(.solvik) .text-\[\#172033\] { color: oklch(0.877 0.008 120.0); }
@@ -199,7 +194,6 @@
 :where(.solvik) .text-emerald-600 { color: oklch(0.730 0.145 163.2); }
 :where(.solvik) .text-emerald-700 { color: oklch(0.767 0.118 165.6); }
 :where(.solvik) .text-emerald-800 { color: oklch(0.799 0.095 166.9); }
-:where(.solvik) .text-emerald-900 { color: oklch(0.821 0.077 168.9); }
 :where(.solvik) .text-indigo-300 { color: oklch(0.650 0.115 274.7); }
 :where(.solvik) .text-indigo-400 { color: oklch(0.697 0.182 276.9); }
 :where(.solvik) .text-indigo-500 { color: oklch(0.734 0.233 277.1); }
@@ -214,7 +208,11 @@
 :where(.solvik .academic-module) .text-indigo-900 { color: oklch(0.810 0.101 131.1); }
 :where(.solvik) .text-indigo-950 { color: oklch(0.872 0.090 281.3); }
 :where(.solvik .academic-module) .text-indigo-950 { color: oklch(0.865 0.072 132.1); }
-:where(.solvik) .text-pink-700 { color: oklch(0.759 0.223 4.0); }
+:where(.solvik) .text-lime-500 { color: oklch(0.657 0.233 130.8); }
+:where(.solvik) .text-lime-600 { color: oklch(0.708 0.200 131.7); }
+:where(.solvik) .text-lime-700 { color: oklch(0.757 0.157 131.6); }
+:where(.solvik) .text-lime-800 { color: oklch(0.790 0.124 130.9); }
+:where(.solvik) .text-lime-900 { color: oklch(0.810 0.101 131.1); }
 :where(.solvik) .text-purple-700 { color: oklch(0.772 0.265 301.9); }
 :where(.solvik) .text-red-500 { color: oklch(0.712 0.237 25.3); }
 :where(.solvik) .text-red-600 { color: oklch(0.738 0.245 27.3); }
@@ -224,7 +222,6 @@
 :where(.solvik) .text-rose-600 { color: oklch(0.734 0.253 17.6); }
 :where(.solvik) .text-rose-700 { color: oklch(0.764 0.222 16.9); }
 :where(.solvik) .text-rose-800 { color: oklch(0.789 0.188 13.7); }
-:where(.solvik) .text-rose-900 { color: oklch(0.808 0.159 10.3); }
 :where(.solvik) .text-sky-600 { color: oklch(0.733 0.158 242.0); }
 :where(.solvik) .text-sky-700 { color: oklch(0.770 0.134 242.7); }
 :where(.solvik) .text-sky-800 { color: oklch(0.794 0.110 240.8); }

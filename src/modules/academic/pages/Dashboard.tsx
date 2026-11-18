@@ -157,9 +157,9 @@ export const Dashboard: React.FC = () => {
   );
 
   return (
-    <div className="space-y-1">
+    <div className="space-y-5">
       {/* Welcome Banner */}
-      <div className="dashboard-welcome p-2 rounded-2xl shadow-sm">
+      <div className="dashboard-welcome p-5 sm:p-6 rounded-2xl shadow-sm">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-2 text-indigo-300 text-xs font-semibold uppercase tracking-wider mb-1">
@@ -169,7 +169,7 @@ export const Dashboard: React.FC = () => {
             <h2 className="text-lg sm:text-xl font-bold tracking-tight text-white">
               Welcome back, Priyanka
             </h2>
-            <p className="mt-1 text-[9px] sm:text-[10px] text-slate-300 max-w-2xl leading-relaxed">
+            <p className="mt-1 text-sm text-slate-300 max-w-2xl leading-relaxed">
               Teaching <span className="font-semibold text-white">{module.name}</span>. Today is{' '}
               <span className="font-semibold text-indigo-200">{todayDayName}, {formatReadableDate(todayStr)}</span>.
               Displaying <span className="font-semibold text-white">{todayClasses.length} active batch sessions</span>{' '}
@@ -191,11 +191,11 @@ export const Dashboard: React.FC = () => {
       </div>
 
       {/* Summary Cards */}
-      <div className="dashboard-metrics grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+      <div className="dashboard-metrics grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Card 1: Today's Classes */}
         <div
           onClick={() => navigate({ to: '/academic/schedule' })}
-          className="dashboard-stat-card p-3 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-indigo-300 transition-colors cursor-pointer group"
+          className="dashboard-stat-card p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-indigo-300 transition-colors cursor-pointer group"
         >
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
@@ -218,7 +218,7 @@ export const Dashboard: React.FC = () => {
         </div>
 
         {/* Card 2: Free Hours & Admin Tasks */}
-        <div className="dashboard-stat-card p-3 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-indigo-300 transition-colors">
+        <div className="dashboard-stat-card p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-indigo-300 transition-colors">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
               Free Hours & Admin Tasks
@@ -243,7 +243,7 @@ export const Dashboard: React.FC = () => {
         {/* Card 3: Pending Schedule Approvals */}
         <div
           onClick={() => navigate({ to: '/academic/schedule' })}
-          className="dashboard-stat-card p-3 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-amber-300 transition-colors cursor-pointer group"
+          className="dashboard-stat-card p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-amber-300 transition-colors cursor-pointer group"
         >
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
@@ -268,13 +268,13 @@ export const Dashboard: React.FC = () => {
         {/* Card 4: Syllabus Updates Pending */}
         <div
           onClick={() => navigate({ to: '/academic/notifications' })}
-          className="dashboard-stat-card p-3 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-rose-300 transition-colors cursor-pointer group"
+          className="dashboard-stat-card p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-lime-300 transition-colors cursor-pointer group"
         >
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
               Syllabus Pending
             </span>
-            <div className="dashboard-stat-icon w-7 h-7 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center">
+            <div className="dashboard-stat-icon w-7 h-7 rounded-xl bg-lime-50 text-lime-600 flex items-center justify-center">
               <AlertCircle className="w-4 h-4" />
             </div>
           </div>
@@ -284,7 +284,7 @@ export const Dashboard: React.FC = () => {
             </span>
             <span className="text-xs text-slate-500">actions needed</span>
           </div>
-          <div className="mt-1 flex items-center gap-1 text-xs text-rose-600 font-medium group-hover:translate-x-0.5 transition-transform">
+          <div className="mt-1 flex items-center gap-1 text-xs text-lime-600 font-medium group-hover:translate-x-0.5 transition-transform">
             <span>Check reminders</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </div>
@@ -384,7 +384,7 @@ export const Dashboard: React.FC = () => {
                               : item.scheduledDays.map((day) => ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][day]).join(', ')})
                           </span>
                           <span className="text-[10px] text-slate-400">·</span>
-                          <span className="text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-100">
+                          <span className="text-[10px] font-semibold text-lime-700 bg-lime-50 px-2 py-0.5 rounded border border-lime-100">
                             Scheduled {activeDayName}
                           </span>
                           <span className="text-[10px] text-slate-400">·</span>
@@ -467,8 +467,8 @@ export const Dashboard: React.FC = () => {
             )}
 
             {completedModuleSchedules.length > 0 && (
-              <div className="rounded-xl border border-emerald-100 bg-emerald-50/50 p-3.5">
-                <h3 className="text-xs font-bold text-emerald-900">Completed Modules · No Further Classes Scheduled</h3>
+              <div className="rounded-xl border border-lime-100 bg-lime-50/50 p-3.5">
+                <h3 className="text-xs font-bold text-lime-900">Completed Modules · No Further Classes Scheduled</h3>
                 <div className="mt-2 space-y-2">
                   {completedModuleSchedules.map((schedule) => {
                     const status = getScheduleCompletionStatus({
@@ -485,7 +485,7 @@ export const Dashboard: React.FC = () => {
                     return (
                       <div
                         key={`${schedule.id}-${schedule.moduleId}`}
-                        className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-emerald-100 bg-white px-3 py-2"
+                        className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-lime-100 bg-white px-3 py-2"
                       >
                         <div>
                           <p className="text-xs font-semibold text-slate-900">{schedule.batch} · {schedule.moduleName}</p>
@@ -495,14 +495,14 @@ export const Dashboard: React.FC = () => {
                           </p>
                         </div>
                         <div className="flex flex-wrap items-center gap-1.5">
-                          <span className="rounded-md border border-emerald-200 bg-emerald-50 px-2 py-0.5 text-[10px] font-semibold text-emerald-700">
+                          <span className="rounded-md border border-lime-200 bg-lime-50 px-2 py-0.5 text-[10px] font-semibold text-lime-700">
                             Class Completed
                           </span>
                           {exam && (
                             <button
                               type="button"
                               onClick={() => navigate({ to: '/academic/examinations', search: { exam: exam.id } })}
-                              className="rounded-md border border-rose-200 bg-rose-50 px-2 py-0.5 text-[10px] font-semibold text-rose-900 hover:bg-rose-100"
+                              className="rounded-md border border-lime-200 bg-lime-50 px-2 py-0.5 text-[10px] font-semibold text-lime-900 hover:bg-lime-100"
                             >
                               {status.isExamCompleted ? 'Exam Completed' : 'Exam Scheduled'}
                             </button>
@@ -595,14 +595,14 @@ export const Dashboard: React.FC = () => {
                           </button>
                           <button
                             onClick={() => updateAdminTaskStatus(task.id, 'Completed')}
-                            className="px-3 py-1 text-[11px] font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg transition-colors flex items-center gap-1 cursor-pointer shadow-2xs"
+                            className="px-3 py-1 text-[11px] font-semibold text-white bg-lime-600 hover:bg-lime-700 rounded-lg transition-colors flex items-center gap-1 cursor-pointer shadow-2xs"
                           >
                             <Check className="w-3.5 h-3.5" />
                             <span>Mark Done</span>
                           </button>
                         </>
                       ) : (
-                        <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">
+                        <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-lime-700 bg-lime-50 px-2.5 py-1 rounded-md border border-lime-200">
                           <CheckCircle2 className="w-3.5 h-3.5" />
                           <span>Completed</span>
                         </span>
@@ -625,7 +625,7 @@ export const Dashboard: React.FC = () => {
                 <p className="text-[11px] text-slate-500">Overdue syllabus updates</p>
               </div>
               {overdueReminders.length > 0 && (
-                <span className="px-2 py-0.5 text-[11px] font-bold rounded-full bg-rose-100 text-rose-700 font-mono-numbers">
+                <span className="px-2 py-0.5 text-[11px] font-bold rounded-full bg-lime-100 text-lime-700 font-mono-numbers">
                   {overdueReminders.length} Overdue
                 </span>
               )}
@@ -633,7 +633,7 @@ export const Dashboard: React.FC = () => {
 
             {overdueReminders.length === 0 ? (
               <div className="p-6 rounded-2xl bg-white border border-slate-200 text-center">
-                <div className="w-10 h-10 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto mb-3">
+                <div className="w-10 h-10 rounded-full bg-lime-50 text-lime-600 flex items-center justify-center mx-auto mb-3">
                   <CheckCircle2 className="w-5 h-5" />
                 </div>
                 <h4 className="text-[11px] font-bold text-slate-900">You're all caught up!</h4>
@@ -646,10 +646,10 @@ export const Dashboard: React.FC = () => {
                 {overdueReminders.map((rem) => (
                   <div
                     key={rem.id}
-                    className="p-4 rounded-xl bg-white border border-rose-200 shadow-2xs hover:border-rose-300 transition-colors"
+                    className="p-4 rounded-xl bg-white border border-lime-200 shadow-2xs hover:border-lime-300 transition-colors"
                   >
                     <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-rose-50 text-rose-600 flex items-center justify-center shrink-0 mt-0.5">
+                      <div className="w-8 h-8 rounded-lg bg-lime-50 text-lime-600 flex items-center justify-center shrink-0 mt-0.5">
                         <ShieldAlert className="w-4 h-4" />
                       </div>
                       <div className="flex-1 min-w-0">
@@ -667,7 +667,7 @@ export const Dashboard: React.FC = () => {
                             onClick={() => {
                               navigate({ to: '/academic/syllabus', search: { session: rem.sessionId || '', date: rem.dateContext || '' } });
                             }}
-                            className="px-3 py-1.5 text-[10px] font-semibold text-rose-700 bg-rose-50 hover:bg-rose-100 rounded-lg transition-colors flex items-center gap-1 cursor-pointer"
+                            className="px-3 py-1.5 text-[10px] font-semibold text-lime-700 bg-lime-50 hover:bg-lime-100 rounded-lg transition-colors flex items-center gap-1 cursor-pointer"
                           >
                             <span>Record Now</span>
                             <ArrowRight className="w-3 h-3" />

@@ -1692,3 +1692,78 @@ nav a { transition: background .25s, color .25s, border-color .25s; }
 .solvik .app-shell .bg-blue-50 { background-color: color-mix(in oklab, var(--lime) 16%, transparent); }
 .solvik .app-shell .border-\[\#0F2A4A\] { border-color: var(--lime); }
 .solvik .app-shell .accent-\[\#0F2A4A\] { accent-color: var(--lime); }
+
+/* ---------------------------------------------------------------------
+ * Academic: same interface as the home page — open layout on the
+ * backdrop, pill tab menu, frosted glass cards, lime solid buttons.
+ * --------------------------------------------------------------------- */
+.pill-link.is-active {
+  color: var(--foreground);
+  background: oklch(1 0 0 / 14%);
+  box-shadow: inset 0 1px 0 oklch(1 0 0 / 12%);
+}
+.solvik .academic-module .portal-header {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+.solvik .academic-module {
+  --white: var(--glass);
+  --soft-ivory: transparent;
+  --stat-accent: var(--lime);
+}
+/* Cards become home-page glass panels */
+.solvik .academic-module main :is(.rounded-2xl, .rounded-3xl):is(.bg-white, .border) {
+  border-radius: 26px;
+  border-color: var(--glass-border);
+  box-shadow: var(--shadow-card);
+}
+.solvik .academic-module main :is(.rounded-2xl, .rounded-3xl).bg-white {
+  background-color: var(--glass);
+  backdrop-filter: blur(22px) saturate(140%);
+  -webkit-backdrop-filter: blur(22px) saturate(140%);
+}
+.solvik .academic-module main .rounded-xl:is(.bg-white, .border) { border-radius: 18px; }
+.solvik .academic-module main :is(.rounded-xl, .rounded-lg).bg-white { background-color: var(--glass-strong); }
+/* Home uses plain glass tiles: no coloured edge stripes */
+.solvik .academic-module .dashboard-metrics > .dashboard-stat-card::before { display: none; }
+.solvik .academic-module :is(.border-l-2, .border-l-4, .notification-card.is-unread) {
+  border-left-width: 1px;
+}
+.solvik .academic-module .dashboard-metrics .dashboard-stat-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  color: var(--foreground);
+  background: oklch(1 0 0 / 6%);
+  border: 1px solid var(--glass-border);
+}
+.solvik .academic-module .syllabus-history-summary > div { border-top-width: 1px !important; border-top-color: var(--glass-border) !important; }
+/* Solid accent buttons and badges: Solvik lime with dark text */
+.solvik .academic-module :is(.bg-lime-500, .bg-lime-600, .bg-lime-700, .bg-lime-800, .bg-lime-900, .bg-indigo-600) {
+  background-color: var(--lime);
+  color: var(--lime-foreground);
+}
+.solvik .academic-module :is(.bg-lime-500, .bg-lime-600, .bg-lime-700, .bg-lime-800, .bg-lime-900, .bg-indigo-600) :is(.text-white, svg, span) {
+  color: var(--lime-foreground);
+}
+.solvik .academic-module :is(.hover\:bg-lime-600, .hover\:bg-lime-700, .hover\:bg-lime-800, .hover\:bg-lime-900, .hover\:bg-indigo-700):hover {
+  background-color: oklch(0.83 0.17 124);
+  color: var(--lime-foreground);
+}
+.solvik .academic-module button:is(.rounded-lg, .rounded-md, .rounded-xl):is(.bg-lime-500, .bg-lime-600, .bg-lime-700, .bg-lime-800, .bg-lime-900, .bg-indigo-600) {
+  border-radius: 999px;
+}
+/* Gentle text size lift so Academic reads like the home page */
+.solvik .academic-module .text-\[10px\] { font-size: 11px; }
+.solvik .academic-module .text-\[11px\] { font-size: 12px; }
+.solvik .academic-module .text-xs { font-size: 12.5px; }
+/* Academic welcome card = home page lime feature card */
+.solvik .academic-module .dashboard-welcome {
+  border-radius: 26px;
+  border: 1px solid color-mix(in oklab, var(--lime) 45%, transparent);
+  background: linear-gradient(160deg, color-mix(in oklab, var(--lime) 22%, transparent), oklch(1 0 0 / 5%) 70%);
+  backdrop-filter: blur(22px) saturate(140%);
+  -webkit-backdrop-filter: blur(22px) saturate(140%);
+  box-shadow: var(--shadow-card);
+}

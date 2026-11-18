@@ -107,7 +107,7 @@ export const Profile: React.FC = () => {
                   className="p-3.5 rounded-xl border border-slate-200 bg-slate-50/50 flex items-center justify-between text-xs"
                 >
                   <span className="font-semibold text-slate-800">{batchName}</span>
-                  <span className="text-emerald-700 font-semibold bg-emerald-50 px-2.5 py-0.5 rounded border border-emerald-200">
+                  <span className="text-lime-700 font-semibold bg-lime-50 px-2.5 py-0.5 rounded border border-lime-200">
                     Active Faculty
                   </span>
                 </div>
@@ -130,7 +130,7 @@ export const Profile: React.FC = () => {
               </div>
               <div className="p-3 rounded-lg bg-slate-50 col-span-2 sm:col-span-1">
                 <span className="text-slate-400 block mb-0.5">Syllabus Logged</span>
-                <span className="text-base font-bold text-emerald-600 font-mono-numbers">
+                <span className="text-base font-bold text-lime-600 font-mono-numbers">
                   {completedSessions}
                 </span>
               </div>

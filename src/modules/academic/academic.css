@@ -30,7 +30,7 @@
   --rose: oklch(0.609 0.190 124.0);
   --soft-rose: oklch(0.947 0.026 124.0);
   --warm-gold: #e8b45a;
-  --teal: #22a99a;
+  --teal: oklch(0.86 0.16 124);
   --soft-ivory: #f8f7fc;
   --white: #ffffff;
   --primary-text: #29243a;

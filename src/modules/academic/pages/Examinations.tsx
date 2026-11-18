@@ -183,13 +183,13 @@ export const Examinations: React.FC = () => {
       label: 'Admin-scheduled examinations',
       count: assignedExaminations.length,
       icon: CalendarDays,
-      color: 'bg-rose-50 text-rose-900'
+      color: 'bg-lime-50 text-lime-900'
     },
     {
       label: 'Eligible students',
       count: assignedExaminations.reduce((total, exam) => total + exam.eligibleStudents.length, 0),
       icon: Users,
-      color: 'bg-pink-50 text-pink-700'
+      color: 'bg-lime-50 text-lime-700'
     },
     {
       label: 'Marks submitted',
@@ -198,7 +198,7 @@ export const Examinations: React.FC = () => {
         assignedExaminations.some((exam) => exam.id === record.examinationId)
       ).length,
       icon: CheckCircle2,
-      color: 'bg-emerald-50 text-emerald-700'
+      color: 'bg-lime-50 text-lime-700'
     }
   ];
 
@@ -209,9 +209,9 @@ export const Examinations: React.FC = () => {
 
   return (
     <div className="space-y-4">
-      <header className="rounded-xl border border-rose-100 bg-gradient-to-r from-rose-50 to-white p-4 sm:p-5">
+      <header className="rounded-xl border border-lime-100 bg-gradient-to-r from-lime-50 to-white p-4 sm:p-5">
         <div className="flex items-start gap-3">
-          <div className="rounded-lg bg-rose-900 p-2 text-white">
+          <div className="rounded-lg bg-lime-900 p-2 text-white">
             <ClipboardCheck className="h-5 w-5" />
           </div>
           <div>
@@ -221,7 +221,7 @@ export const Examinations: React.FC = () => {
             </p>
           </div>
         </div>
-        <p className="mt-4 rounded-lg border border-rose-100 bg-white/80 px-3 py-2 text-xs leading-relaxed text-rose-900">
+        <p className="mt-4 rounded-lg border border-lime-100 bg-white/80 px-3 py-2 text-xs leading-relaxed text-lime-900">
           Admin schedules and eligibility lists are mock data in this frontend. Drafts and submitted marks are saved in this browser only; notifications are mock handoffs and do not reach an external Admin service.
         </p>
       </header>
@@ -240,7 +240,7 @@ export const Examinations: React.FC = () => {
 
       {assignedExaminations.length === 0 ? (
         <div className="rounded-xl border border-slate-200 bg-white p-8 text-center">
-          <CalendarDays className="mx-auto h-8 w-8 text-rose-300" />
+          <CalendarDays className="mx-auto h-8 w-8 text-lime-300" />
           <h2 className="mt-3 text-sm font-bold text-slate-800">No examination schedules</h2>
           <p className="mt-1 text-xs text-slate-500">Admin-published schedules for your assigned batches will appear here.</p>
         </div>
@@ -283,7 +283,7 @@ export const Examinations: React.FC = () => {
                 id={`examination-${exam.id}`}
                 className={`rounded-xl border bg-white p-4 shadow-2xs sm:p-5 ${
                   activeExamId === exam.id || searchParams.exam === exam.id
-                    ? 'border-rose-300 ring-1 ring-rose-100'
+                    ? 'border-lime-300 ring-1 ring-lime-100'
                     : 'border-slate-200'
                 }`}
               >
@@ -291,10 +291,10 @@ export const Examinations: React.FC = () => {
                   <div>
                     <div className="flex flex-wrap items-center gap-2">
                       <h2 className="text-sm font-bold text-slate-900">{exam.moduleName}</h2>
-                      <span className="rounded-full bg-rose-50 px-2.5 py-1 text-[11px] font-semibold text-rose-900">{exam.batchName}</span>
+                      <span className="rounded-full bg-lime-50 px-2.5 py-1 text-[11px] font-semibold text-lime-900">{exam.batchName}</span>
                       <span className="rounded-full bg-indigo-50 px-2.5 py-1 text-[11px] font-semibold text-indigo-700">{exam.status}</span>
                       {submitted ? (
-                        <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2.5 py-1 text-[11px] font-semibold text-emerald-700">
+                        <span className="inline-flex items-center gap-1 rounded-full bg-lime-50 px-2.5 py-1 text-[11px] font-semibold text-lime-700">
                           <CheckCircle2 className="h-3.5 w-3.5" /> Exam Completed · Marks Submitted
                         </span>
                       ) : record?.status === 'Draft' ? (
@@ -311,7 +311,7 @@ export const Examinations: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => setExpandedEligibleExamId((current) => current === exam.id ? null : exam.id)}
-                      className="inline-flex items-center gap-1.5 rounded-lg border border-rose-200 bg-white px-3 py-2 text-xs font-semibold text-rose-900 hover:bg-rose-50"
+                      className="inline-flex items-center gap-1.5 rounded-lg border border-lime-200 bg-white px-3 py-2 text-xs font-semibold text-lime-900 hover:bg-lime-50"
                     >
                       <Users className="h-4 w-4" />
                       {exam.eligibleStudents.length} Eligible Students
@@ -324,11 +324,11 @@ export const Examinations: React.FC = () => {
                             setActiveExamId(null);
                             setShowingMarksExamId(exam.id);
                           }}
-                          className="inline-flex items-center gap-1.5 rounded-lg bg-rose-900 px-3 py-2 text-xs font-semibold text-white hover:bg-rose-800"
+                          className="inline-flex items-center gap-1.5 rounded-lg bg-lime-900 px-3 py-2 text-xs font-semibold text-white hover:bg-lime-800"
                         >
                           <FileText className="h-4 w-4" /> View Marks
                         </button>
-                        <div className="inline-flex items-center gap-2 rounded-lg border border-rose-200 bg-white px-2 py-1.5 text-[11px] font-medium text-slate-700">
+                        <div className="inline-flex items-center gap-2 rounded-lg border border-lime-200 bg-white px-2 py-1.5 text-[11px] font-medium text-slate-700">
                           <span>Export</span>
                           <select
                             value={exportFormatByExam[exam.id] ?? 'pdf'}
@@ -336,7 +336,7 @@ export const Examinations: React.FC = () => {
                               ...current,
                               [exam.id]: event.target.value as ExaminationExportFormat
                             }))}
-                            className="rounded-md border border-slate-200 bg-white px-2 py-1 text-[10px] text-slate-700 outline-none focus:border-rose-400"
+                            className="rounded-md border border-slate-200 bg-white px-2 py-1 text-[10px] text-slate-700 outline-none focus:border-lime-400"
                             aria-label={`Export format for ${exam.moduleName}`}
                           >
                             <option value="pdf">PDF</option>
@@ -346,7 +346,7 @@ export const Examinations: React.FC = () => {
                           <button
                             type="button"
                             onClick={() => downloadExaminationResults(exam, record, exportFormatByExam[exam.id] ?? 'pdf')}
-                            className="rounded-md bg-rose-900 px-2.5 py-1 text-[10px] font-semibold text-white hover:bg-rose-800"
+                            className="rounded-md bg-lime-900 px-2.5 py-1 text-[10px] font-semibold text-white hover:bg-lime-800"
                           >
                             Download
                           </button>
@@ -356,7 +356,7 @@ export const Examinations: React.FC = () => {
                       <button
                         type="button"
                         onClick={() => openEntry(exam, record)}
-                        className="inline-flex items-center gap-1.5 rounded-lg bg-rose-900 px-3 py-2 text-xs font-semibold text-white hover:bg-rose-800"
+                        className="inline-flex items-center gap-1.5 rounded-lg bg-lime-900 px-3 py-2 text-xs font-semibold text-white hover:bg-lime-800"
                       >
                         <FileText className="h-4 w-4" /> {record ? 'Continue Marks' : 'Enter Marks'}
                       </button>
@@ -402,7 +402,7 @@ export const Examinations: React.FC = () => {
                           </>
                         )}
                         {isCompleted ? (
-                          <div className="mt-2 inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-1 text-[10px] font-semibold text-emerald-700">
+                          <div className="mt-2 inline-flex items-center gap-1 rounded-full bg-lime-50 px-2 py-1 text-[10px] font-semibold text-lime-700">
                             <CheckCircle2 className="h-3.5 w-3.5" /> Completed
                           </div>
                         ) : (
@@ -411,7 +411,7 @@ export const Examinations: React.FC = () => {
                               type="button"
                               onClick={() => handleComponentCompletion(exam, componentKey)}
                               disabled={!isAvailable}
-                              className="inline-flex w-full items-center justify-center rounded-md border border-rose-200 bg-rose-50 px-2.5 py-1.5 text-[10px] font-semibold text-rose-900 transition-colors hover:bg-rose-100 disabled:cursor-not-allowed disabled:border-slate-200 disabled:bg-slate-100 disabled:text-slate-400"
+                              className="inline-flex w-full items-center justify-center rounded-md border border-lime-200 bg-lime-50 px-2.5 py-1.5 text-[10px] font-semibold text-lime-900 transition-colors hover:bg-lime-100 disabled:cursor-not-allowed disabled:border-slate-200 disabled:bg-slate-100 disabled:text-slate-400"
                             >
                               Exam Completed
                             </button>
@@ -438,12 +438,12 @@ export const Examinations: React.FC = () => {
 
                 {expandedEligibleExamId === exam.id && (
                   <div className="mt-4 overflow-x-auto rounded-lg border border-slate-200">
-                    <div className="flex items-center justify-between bg-rose-50 px-3 py-2 text-[10px] uppercase tracking-wide text-rose-900">
+                    <div className="flex items-center justify-between bg-lime-50 px-3 py-2 text-[10px] uppercase tracking-wide text-lime-900">
                       <span>All students</span>
                       <span>{finalEligibilityClosed ? 'Eligibility Closed' : 'Eligibility Open'}</span>
                     </div>
                     <table className="w-full min-w-[400px] text-left text-xs">
-                      <thead className="bg-rose-50 text-[10px] uppercase tracking-wide text-rose-900">
+                      <thead className="bg-lime-50 text-[10px] uppercase tracking-wide text-lime-900">
                         <tr>
                           <th className="px-3 py-2">Student</th>
                           <th className="px-3 py-2">Student ID</th>
@@ -459,7 +459,7 @@ export const Examinations: React.FC = () => {
                               <td className="px-3 py-2 font-medium">{student.name}</td>
                               <td className="px-3 py-2 font-mono">{student.id}</td>
                               <td className="px-3 py-2">
-                                <span className={`inline-flex rounded-full px-2 py-0.5 font-semibold ${isEligible ? 'bg-emerald-50 text-emerald-700' : 'bg-slate-100 text-slate-500'}`}>
+                                <span className={`inline-flex rounded-full px-2 py-0.5 font-semibold ${isEligible ? 'bg-lime-50 text-lime-700' : 'bg-slate-100 text-slate-500'}`}>
                                   {isEligible ? 'Eligible' : 'Not Eligible'}
                                 </span>
                               </td>
@@ -476,7 +476,7 @@ export const Examinations: React.FC = () => {
                   <p className="mt-3 text-[11px] text-slate-500">Last saved locally: {formatDateTime(record.savedAt)}</p>
                 )}
                 {submitted && (
-                  <p className="mt-3 text-[11px] text-emerald-800">
+                  <p className="mt-3 text-[11px] text-lime-800">
                     Submitted {formatDateTime(record.submittedAt)} by trainer {record.trainerId}. Submitted marks are locked.
                   </p>
                 )}
@@ -528,7 +528,7 @@ export const Examinations: React.FC = () => {
                                         value={value ?? ''}
                                         onChange={(event) => setMark(student.studentId, component, event.target.value)}
                                         aria-label={`${component} marks for ${student.studentName}`}
-                                        className="w-24 rounded-md border border-slate-200 px-2 py-1.5 text-xs outline-none focus:border-rose-400 focus:ring-2 focus:ring-rose-100"
+                                        className="w-24 rounded-md border border-slate-200 px-2 py-1.5 text-xs outline-none focus:border-lime-400 focus:ring-2 focus:ring-lime-100"
                                       />
                                     </td>
                                   );
@@ -546,7 +546,7 @@ export const Examinations: React.FC = () => {
                                         value={value ?? ''}
                                         onChange={(event) => setMark(student.studentId, component, event.target.value)}
                                         aria-label={`${component} marks for ${student.studentName}`}
-                                        className="w-20 rounded-md border border-slate-200 px-2 py-1.5 text-xs outline-none focus:border-rose-400 focus:ring-2 focus:ring-rose-100"
+                                        className="w-20 rounded-md border border-slate-200 px-2 py-1.5 text-xs outline-none focus:border-lime-400 focus:ring-2 focus:ring-lime-100"
                                       />
                                     </td>
                                   );
@@ -560,7 +560,7 @@ export const Examinations: React.FC = () => {
                                     value={marks?.project ?? ''}
                                     onChange={(event) => setMark(student.studentId, 'Project', event.target.value)}
                                     aria-label={`Project marks for ${student.studentName}`}
-                                    className="w-24 rounded-md border border-slate-200 px-2 py-1.5 text-xs outline-none focus:border-rose-400 focus:ring-2 focus:ring-rose-100"
+                                    className="w-24 rounded-md border border-slate-200 px-2 py-1.5 text-xs outline-none focus:border-lime-400 focus:ring-2 focus:ring-lime-100"
                                   />
                                 </td>
                                 <td className="px-3 py-2 text-center font-semibold text-slate-700">
@@ -577,7 +577,7 @@ export const Examinations: React.FC = () => {
                         <p className="text-xs font-medium text-amber-900">Submit these final marks? They will be locked and read-only.</p>
                         <div className="flex gap-2">
                           <button type="button" onClick={() => setConfirmingExamId(null)} className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700">Cancel</button>
-                          <button type="button" onClick={() => confirmSubmit(exam)} className="rounded-lg bg-rose-900 px-3 py-2 text-xs font-semibold text-white hover:bg-rose-800">Confirm Submission</button>
+                          <button type="button" onClick={() => confirmSubmit(exam)} className="rounded-lg bg-lime-900 px-3 py-2 text-xs font-semibold text-white hover:bg-lime-800">Confirm Submission</button>
                         </div>
                       </div>
                     ) : (
@@ -587,14 +587,14 @@ export const Examinations: React.FC = () => {
                           onClick={() => {
                             if (saveExaminationMarks(exam.id, draft)) setActiveExamId(null);
                           }}
-                          className="rounded-lg border border-rose-200 bg-white px-3.5 py-2 text-xs font-semibold text-rose-900 hover:bg-rose-50"
+                          className="rounded-lg border border-lime-200 bg-white px-3.5 py-2 text-xs font-semibold text-lime-900 hover:bg-lime-50"
                         >
                           Save Draft
                         </button>
                         <button
                           type="button"
                           onClick={() => setConfirmingExamId(exam.id)}
-                          className="rounded-lg bg-rose-900 px-3.5 py-2 text-xs font-semibold text-white hover:bg-rose-800"
+                          className="rounded-lg bg-lime-900 px-3.5 py-2 text-xs font-semibold text-white hover:bg-lime-800"
                         >
                           Submit Final Marks
                         </button>
@@ -604,9 +604,9 @@ export const Examinations: React.FC = () => {
                 )}
 
                 {submitted && viewing && record && (
-                  <div className="mt-4 overflow-x-auto rounded-lg border border-emerald-200">
+                  <div className="mt-4 overflow-x-auto rounded-lg border border-lime-200">
                     <table className="w-full min-w-[900px] text-left text-xs">
-                      <thead className="bg-emerald-50 text-[10px] uppercase tracking-wide text-emerald-800">
+                      <thead className="bg-lime-50 text-[10px] uppercase tracking-wide text-lime-800">
                         <tr>
                           <th className="px-3 py-2">Student</th>
                           <th className="px-3 py-2">Theory</th>

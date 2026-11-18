@@ -91,11 +91,11 @@ export const Notifications: React.FC = () => {
                   item.isResolved
                     ? 'bg-slate-50/60 border-slate-200 opacity-75'
                     : isOverdue
-                    ? 'bg-white border-rose-200 shadow-2xs hover:border-rose-300'
+                    ? 'bg-white border-lime-200 shadow-2xs hover:border-lime-300'
                     : isExamination
                     ? 'bg-white border-indigo-200 shadow-2xs hover:border-indigo-300'
                     : isFinanceSubmission
-                    ? 'bg-white border-rose-200 shadow-2xs hover:border-rose-300'
+                    ? 'bg-white border-lime-200 shadow-2xs hover:border-lime-300'
                     : 'bg-white border-amber-200 shadow-2xs hover:border-amber-300'
                 }`}
               >
@@ -107,11 +107,11 @@ export const Notifications: React.FC = () => {
                         item.isResolved
                           ? 'bg-slate-100 text-slate-500'
                           : isOverdue
-                          ? 'bg-rose-50 text-rose-600'
+                          ? 'bg-lime-50 text-lime-600'
                           : isExamination
                           ? 'bg-indigo-50 text-indigo-600'
                           : isFinanceSubmission
-                          ? 'bg-rose-50 text-rose-800'
+                          ? 'bg-lime-50 text-lime-800'
                           : 'bg-amber-50 text-amber-600'
                       }`}
                     >
@@ -131,9 +131,9 @@ export const Notifications: React.FC = () => {
                             item.isResolved
                               ? 'text-slate-500'
                               : isOverdue
-                              ? 'text-rose-600'
+                              ? 'text-lime-600'
                               : isFinanceSubmission
-                              ? 'text-rose-800'
+                              ? 'text-lime-800'
                               : 'text-amber-600'
                           }`}
                         >
@@ -177,11 +177,11 @@ export const Notifications: React.FC = () => {
                           }}
                           className={`px-3.5 py-1.5 text-xs font-semibold rounded-lg flex items-center gap-1.5 shadow-2xs transition-colors ${
                             isOverdue
-                              ? 'bg-rose-600 hover:bg-rose-700 text-white'
+                              ? 'bg-lime-600 hover:bg-lime-700 text-white'
                               : isExamination
                               ? 'bg-indigo-600 hover:bg-indigo-700 text-white'
                               : isFinanceSubmission
-                              ? 'bg-rose-900 hover:bg-rose-800 text-white'
+                              ? 'bg-lime-900 hover:bg-lime-800 text-white'
                               : 'bg-amber-600 hover:bg-amber-700 text-white'
                           }`}
                         >
@@ -206,7 +206,7 @@ export const Notifications: React.FC = () => {
                             View Examination
                           </button>
                         )}
-                        <span className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">
+                        <span className="inline-flex items-center gap-1 text-xs font-semibold text-lime-700 bg-lime-50 px-2.5 py-1 rounded-md border border-lime-200">
                           <CheckCircle2 className="w-3.5 h-3.5" />
                           <span>Resolved</span>
                         </span>

@@ -113,8 +113,8 @@ export const SessionDetailsModal: React.FC<SessionDetailsModalProps> = ({
 
           {/* Missed reason if any */}
           {session.missedReason && (
-            <div className="p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-900">
-              <div className="flex items-center gap-1.5 font-semibold text-rose-800 mb-1">
+            <div className="p-3.5 rounded-xl bg-lime-50 border border-lime-200 text-lime-900">
+              <div className="flex items-center gap-1.5 font-semibold text-lime-800 mb-1">
                 <AlertTriangle className="w-4 h-4" />
                 <span>Non-Conduction Justification</span>
               </div>
@@ -143,7 +143,7 @@ export const SessionDetailsModal: React.FC<SessionDetailsModalProps> = ({
                     <div className="min-w-0">
                       <div className="flex items-center gap-1.5">
                         {act.eventType === 'Topic Completed' ? (
-                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                          <CheckCircle2 className="w-3.5 h-3.5 text-lime-600 shrink-0" />
                         ) : (
                           <AlertTriangle className="w-3.5 h-3.5 text-rose-600 shrink-0" />
                         )}

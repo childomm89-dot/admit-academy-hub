@@ -106,7 +106,7 @@ export const StudentListModal: React.FC<StudentListModalProps> = ({
                         <span
                           className={
                             student.attendancePercent >= 90
-                              ? 'text-emerald-700'
+                              ? 'text-lime-700'
                               : student.attendancePercent >= 80
                               ? 'text-indigo-700'
                               : 'text-amber-700'
@@ -119,7 +119,7 @@ export const StudentListModal: React.FC<StudentListModalProps> = ({
                         <button
                           type="button"
                           onClick={() => onViewProfile(student)}
-                          className="rounded-lg border border-rose-200 bg-rose-50 px-2.5 py-1.5 text-[11px] font-semibold text-rose-800 transition-colors hover:bg-rose-100"
+                          className="rounded-lg border border-lime-200 bg-lime-50 px-2.5 py-1.5 text-[11px] font-semibold text-lime-800 transition-colors hover:bg-lime-100"
                         >
                           View Profile
                         </button>
@@ -134,7 +134,7 @@ export const StudentListModal: React.FC<StudentListModalProps> = ({
 
         <div className="p-4 border-t border-slate-200 bg-slate-50 flex items-center justify-between shrink-0">
           <span className="text-xs text-slate-500 flex items-center gap-1">
-            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> Roster verified by Admin
+            <CheckCircle2 className="w-3.5 h-3.5 text-lime-600" /> Roster verified by Admin
           </span>
           
         </div>

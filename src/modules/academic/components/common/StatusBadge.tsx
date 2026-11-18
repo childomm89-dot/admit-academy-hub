@@ -16,9 +16,9 @@ export const StatusBadge: React.FC<StatusBadgeProps> = ({ status, size = 'md' })
     case 'Updated':
       return (
         <span
-          className={`inline-flex items-center gap-1.5 font-medium rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200 ${sizeClasses}`}
+          className={`inline-flex items-center gap-1.5 font-medium rounded-md bg-lime-50 text-lime-700 border border-lime-200 ${sizeClasses}`}
         >
-          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+          <CheckCircle2 className="w-3.5 h-3.5 text-lime-600 shrink-0" />
           <span className="whitespace-nowrap">{status}</span>
         </span>
       );

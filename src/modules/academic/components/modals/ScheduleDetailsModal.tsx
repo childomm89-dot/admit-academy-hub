@@ -153,12 +153,12 @@ export const ScheduleDetailsModal: React.FC<ScheduleDetailsModalProps> = ({
 
           {/* Missed class reason note */}
           {missedReason && (
-            <div className="p-3 rounded-xl bg-rose-50/80 border border-rose-200 text-rose-900">
-              <div className="flex items-center gap-1.5 font-semibold text-rose-800 mb-1">
+            <div className="p-3 rounded-xl bg-lime-50/80 border border-lime-200 text-lime-900">
+              <div className="flex items-center gap-1.5 font-semibold text-lime-800 mb-1">
                 <AlertCircle className="w-3.5 h-3.5" />
                 <span>Reason for Missed Session</span>
               </div>
-              <p className="text-xs text-rose-700 leading-relaxed">
+              <p className="text-xs text-lime-700 leading-relaxed">
                 "{missedReason}"
               </p>
             </div>

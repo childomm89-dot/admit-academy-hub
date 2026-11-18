@@ -405,8 +405,8 @@ export const SyllabusTracker: React.FC = () => {
             </div>
 
             <div className="flex items-center gap-2 shrink-0">
-              <span className="px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 text-xs font-semibold border border-emerald-200 flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-emerald-600" />
+              <span className="px-3 py-1.5 rounded-lg bg-lime-50 text-lime-800 text-xs font-semibold border border-lime-200 flex items-center gap-1.5">
+                <ShieldCheck className="w-4 h-4 text-lime-600" />
                 <span>{approvedBatches.length} Active Batches</span>
               </span>
             </div>
@@ -473,7 +473,7 @@ export const SyllabusTracker: React.FC = () => {
 
                       {completionStatus.isModuleCompleted ? (
                         <div className="flex flex-col items-end gap-1">
-                          <span className="rounded-md border border-emerald-200 bg-emerald-50 px-2 py-0.5 text-[10px] font-semibold text-emerald-700">
+                          <span className="rounded-md border border-lime-200 bg-lime-50 px-2 py-0.5 text-[10px] font-semibold text-lime-700">
                             Class Completed
                           </span>
                           {batchExamination && (
@@ -483,7 +483,7 @@ export const SyllabusTracker: React.FC = () => {
                                 event.stopPropagation();
                                 navigate({ to: '/academic/examinations', search: { exam: batchExamination.id } });
                               }}
-                              className="rounded-md border border-rose-200 bg-rose-50 px-2 py-0.5 text-[10px] font-semibold text-rose-900 hover:bg-rose-100"
+                              className="rounded-md border border-lime-200 bg-lime-50 px-2 py-0.5 text-[10px] font-semibold text-lime-900 hover:bg-lime-100"
                             >
                               {completionStatus.isExamCompleted ? 'Exam Completed' : 'Exam Scheduled'}
                             </button>
@@ -729,14 +729,14 @@ export const SyllabusTracker: React.FC = () => {
               </h2>
               {isCurrentBatchCompleted ? (
                 <div className="flex flex-wrap items-center gap-1.5">
-                  <span className="rounded-md border border-emerald-200 bg-emerald-50 px-2 py-0.5 text-[10px] font-semibold text-emerald-700">
+                  <span className="rounded-md border border-lime-200 bg-lime-50 px-2 py-0.5 text-[10px] font-semibold text-lime-700">
                     Class Completed
                   </span>
                   {currentBatchExamination && (
                     <button
                       type="button"
                       onClick={() => navigate({ to: '/academic/examinations', search: { exam: currentBatchExamination.id } })}
-                      className="rounded-md border border-rose-200 bg-rose-50 px-2 py-0.5 text-[10px] font-semibold text-rose-900 hover:bg-rose-100"
+                      className="rounded-md border border-lime-200 bg-lime-50 px-2 py-0.5 text-[10px] font-semibold text-lime-900 hover:bg-lime-100"
                     >
                       {currentBatchCompletionStatus?.isExamCompleted ? 'Exam Completed' : 'Exam Scheduled'}
                     </button>
@@ -779,11 +779,11 @@ export const SyllabusTracker: React.FC = () => {
               <span>{completedForThisBatch} Topics Completed {totalTopics - completedForThisBatch} Remaining of {totalTopics}</span>
             </div>
             {moduleFinanceSubmission ? (
-              <div className="mt-3 flex items-start gap-2 rounded-lg border border-rose-200 bg-rose-50 px-3 py-2.5 text-xs text-rose-900">
-                <Building2 className="mt-0.5 h-4 w-4 shrink-0 text-rose-800" />
+              <div className="mt-3 flex items-start gap-2 rounded-lg border border-lime-200 bg-lime-50 px-3 py-2.5 text-xs text-lime-900">
+                <Building2 className="mt-0.5 h-4 w-4 shrink-0 text-lime-800" />
                 <div>
                   <p className="font-bold">Submitted for Finance Verification</p>
-                  <p className="mt-0.5 text-[11px] text-rose-800">
+                  <p className="mt-0.5 text-[11px] text-lime-800">
                     {formatReadableDate(moduleFinanceSubmission.displayDate)} · {new Date(moduleFinanceSubmission.timestamp).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })}
                   </p>
                 </div>
@@ -792,7 +792,7 @@ export const SyllabusTracker: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setIsFinanceSubmissionModalOpen(true)}
-                className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-lg border border-rose-800 bg-rose-900 px-3 py-2.5 text-xs font-bold text-white transition-colors hover:bg-rose-800 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 sm:w-auto"
+                className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-lg border border-lime-800 bg-lime-900 px-3 py-2.5 text-xs font-bold text-white transition-colors hover:bg-lime-800 focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2 sm:w-auto"
               >
                 <Building2 className="h-4 w-4" />
                 Module Completed
@@ -803,11 +803,11 @@ export const SyllabusTracker: React.FC = () => {
 
         {/* Notice if Class Was Not Conducted */}
         {isCurrentContextMissed && !isCurrentBatchCompleted && (
-          <div className="p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 text-xs flex items-start gap-2.5">
+          <div className="p-3.5 rounded-xl bg-lime-50 border border-lime-200 text-lime-800 text-xs flex items-start gap-2.5">
             <AlertTriangle className="w-4 h-4 shrink-0 text-rose-600 mt-0.5" />
             <div>
               <span className="font-semibold">Notice for current batch session:</span>
-              <p className="mt-0.5 text-rose-700 leading-relaxed">
+              <p className="mt-0.5 text-lime-700 leading-relaxed">
                 The session for <strong>{currentBatch.batch}</strong> was recorded as "Class Not Conducted". Topic checkboxes are disabled for this session context.
               </p>
             </div>
@@ -954,9 +954,9 @@ export const SyllabusTracker: React.FC = () => {
                               ? 'MCQ Sent'
                               : 'Assessment Pending';
                 const topicStatusClass = topicStatus === 'Completed' || topicStatus === 'Eligible for Completion'
-                  ? 'border-emerald-200 bg-emerald-50 text-emerald-700'
+                  ? 'border-lime-200 bg-lime-50 text-lime-700'
                   : topicStatus === 'Requires Retake'
-                    ? 'border-rose-200 bg-rose-50 text-rose-700'
+                    ? 'border-lime-200 bg-lime-50 text-lime-700'
                     : topicStatus === 'Class Being Taken Again'
                       ? 'border-amber-200 bg-amber-50 text-amber-700'
                       : topicStatus === 'Assessment In Progress' || topicStatus === 'MCQ Sent'
@@ -991,9 +991,9 @@ export const SyllabusTracker: React.FC = () => {
                         ? selectedAttemptEligible ? 'Eligible for Completion' : 'Requires Retake'
                         : 'Pending';
                 const panelStatusClass = panelStatus === 'Eligible for Completion'
-                  ? 'border-emerald-200 bg-emerald-50 text-emerald-700'
+                  ? 'border-lime-200 bg-lime-50 text-lime-700'
                   : panelStatus === 'Requires Retake'
-                    ? 'border-rose-200 bg-rose-50 text-rose-700'
+                    ? 'border-lime-200 bg-lime-50 text-lime-700'
                     : panelStatus === 'Class Being Taken Again'
                       ? 'border-amber-200 bg-amber-50 text-amber-700'
                       : 'border-sky-200 bg-sky-50 text-sky-700';
@@ -1010,7 +1010,7 @@ export const SyllabusTracker: React.FC = () => {
                       <div className="flex items-start gap-3.5 min-w-0">
                         <div className="mt-0.5 shrink-0">
                           {isSavedCompleted ? (
-                            <div className="w-5 h-5 rounded-md bg-emerald-600 text-white flex items-center justify-center shadow-2xs">
+                            <div className="w-5 h-5 rounded-md bg-lime-600 text-white flex items-center justify-center shadow-2xs">
                               <CheckSquare className="w-3.5 h-3.5" />
                             </div>
                           ) : (
@@ -1032,7 +1032,7 @@ export const SyllabusTracker: React.FC = () => {
                             {topic.title}
                           </span>
                           {isSavedCompleted && topicCompletedDate && (
-                            <span className="ml-2 text-[11px] font-semibold text-emerald-700">
+                            <span className="ml-2 text-[11px] font-semibold text-lime-700">
                               {formatReadableDate(topicCompletedDate)}
                             </span>
                           )}
@@ -1055,7 +1055,7 @@ export const SyllabusTracker: React.FC = () => {
                             type="button"
                             onClick={() => topicScheduledDate && openTopicChangeRequest(topic, topicScheduledDate)}
                             disabled={!topicScheduledDate}
-                            className="inline-flex items-center gap-1 rounded-lg border border-rose-200 bg-white px-2 py-1.5 text-[10px] font-semibold text-rose-800 hover:bg-rose-50 disabled:cursor-not-allowed disabled:opacity-50"
+                            className="inline-flex items-center gap-1 rounded-lg border border-lime-200 bg-white px-2 py-1.5 text-[10px] font-semibold text-lime-800 hover:bg-lime-50 disabled:cursor-not-allowed disabled:opacity-50"
                           >
                             Request Change
                           </button>
@@ -1064,7 +1064,7 @@ export const SyllabusTracker: React.FC = () => {
                           <button
                             type="button"
                             onClick={() => setRequestDetails(latestTopicRequest)}
-                            className="inline-flex items-center gap-1 rounded-lg border border-emerald-200 bg-emerald-50 px-2 py-1.5 text-[10px] font-semibold text-emerald-800 hover:bg-emerald-100"
+                            className="inline-flex items-center gap-1 rounded-lg border border-lime-200 bg-lime-50 px-2 py-1.5 text-[10px] font-semibold text-lime-800 hover:bg-lime-100"
                           >
                             <Info className="h-3 w-3" />
                             Request: {latestTopicRequest.status}
@@ -1077,19 +1077,19 @@ export const SyllabusTracker: React.FC = () => {
                           {notesAvailability.status === 'Notes Uploaded' && currentNotes ? (
                             <>
                               <span className="inline-flex max-w-full items-center gap-1 text-[10px] text-slate-600" title={currentNotes.fileName}>
-                                <FileText className="h-3 w-3 shrink-0 text-emerald-700" />
+                                <FileText className="h-3 w-3 shrink-0 text-lime-700" />
                                 <span className="max-w-36 truncate">{currentNotes.fileName}</span>
                                 <span className="whitespace-nowrap text-slate-400">
                                   · {new Date(currentNotes.lastUpdatedAt).toLocaleString()}
                                 </span>
                               </span>
-                              <span className="rounded-md border border-emerald-200 bg-emerald-50 px-2 py-1 text-[10px] font-semibold text-emerald-700">
+                              <span className="rounded-md border border-lime-200 bg-lime-50 px-2 py-1 text-[10px] font-semibold text-lime-700">
                                 Notes Uploaded
                               </span>
                               <button
                                 type="button"
                                 onClick={() => { void downloadTopicNotes(currentNotes, getScheduleBatchId(currentBatch)); }}
-                                className="inline-flex items-center gap-1 rounded-lg border border-emerald-200 bg-white px-2.5 py-1.5 text-[11px] font-semibold text-emerald-800 hover:bg-emerald-50"
+                                className="inline-flex items-center gap-1 rounded-lg border border-lime-200 bg-white px-2.5 py-1.5 text-[11px] font-semibold text-lime-800 hover:bg-lime-50"
                               >
                                 <Download className="h-3 w-3" />
                                 Download Notes
@@ -1256,7 +1256,7 @@ export const SyllabusTracker: React.FC = () => {
                                   <tr key={student.studentId}>
                                     <td className="px-3 py-2.5 font-medium text-slate-800">{student.studentName}</td>
                                     <td className="px-3 py-2.5 text-slate-700">{student.score === null ? '—' : `${student.score}/10`}</td>
-                                    <td className={`px-3 py-2.5 font-semibold ${percentage === null ? 'text-slate-400' : passed ? 'text-emerald-700' : 'text-rose-700'}`}>
+                                    <td className={`px-3 py-2.5 font-semibold ${percentage === null ? 'text-slate-400' : passed ? 'text-lime-700' : 'text-rose-700'}`}>
                                       {percentage === null ? '—' : `${percentage}%`}
                                     </td>
                                     <td className="px-3 py-2.5">
@@ -1264,8 +1264,8 @@ export const SyllabusTracker: React.FC = () => {
                                         percentage === null
                                           ? 'bg-slate-100 text-slate-500'
                                           : passed
-                                            ? 'bg-emerald-50 text-emerald-700'
-                                            : 'bg-rose-50 text-rose-700'
+                                            ? 'bg-lime-50 text-lime-700'
+                                            : 'bg-lime-50 text-lime-700'
                                       }`}>
                                         {percentage === null ? 'Pending' : passed ? 'Passed' : 'Below Threshold'}
                                       </span>
@@ -1346,22 +1346,22 @@ export const SyllabusTracker: React.FC = () => {
                   label: 'Classes Conducted',
                   count: historySummary.classesConducted,
                   Icon: CalendarCheck2,
-                  iconClass: 'bg-emerald-50 text-emerald-700',
-                  countClass: 'text-emerald-700'
+                  iconClass: 'bg-lime-50 text-lime-700',
+                  countClass: 'text-lime-700'
                 },
                 {
                   label: 'Classes Not Conducted',
                   count: historySummary.classesNotConducted,
                   Icon: CalendarX2,
-                  iconClass: 'bg-rose-50 text-rose-700',
-                  countClass: 'text-rose-700'
+                  iconClass: 'bg-lime-50 text-lime-700',
+                  countClass: 'text-lime-700'
                 },
                 {
                   label: 'Topics Completed',
                   count: historySummary.topicsCompleted,
                   Icon: ListChecks,
-                  iconClass: 'bg-emerald-50 text-emerald-700',
-                  countClass: 'text-emerald-700'
+                  iconClass: 'bg-lime-50 text-lime-700',
+                  countClass: 'text-lime-700'
                 },
                 {
                   label: 'Updates Pending',
@@ -1432,13 +1432,13 @@ export const SyllabusTracker: React.FC = () => {
                         <td className="py-2.5 px-3 whitespace-nowrap">
                           <span className={`inline-flex items-center gap-1 rounded border px-2 py-0.5 text-xs font-semibold ${
                             event.eventType === 'Topic Completed'
-                              ? 'border-emerald-200 bg-emerald-50 text-emerald-700'
+                              ? 'border-lime-200 bg-lime-50 text-lime-700'
                               : event.eventType === 'Topic Notes Uploaded' || event.eventType === 'Topic Notes Updated'
-                                ? 'border-rose-200 bg-rose-50 text-rose-800'
+                                ? 'border-lime-200 bg-lime-50 text-lime-800'
                                 : event.eventType === 'Topic Notes Released'
-                                  ? 'border-emerald-200 bg-emerald-50 text-emerald-700'
+                                  ? 'border-lime-200 bg-lime-50 text-lime-700'
                               : event.eventType === 'Topic Requires Retake' || event.eventType === 'Class Not Conducted'
-                                ? 'border-rose-200 bg-rose-50 text-rose-700'
+                                ? 'border-lime-200 bg-lime-50 text-lime-700'
                                 : event.eventType === 'Topic Being Taken Again'
                                   ? 'border-amber-200 bg-amber-50 text-amber-700'
                                   : 'border-indigo-200 bg-indigo-50 text-indigo-700'
@@ -1493,7 +1493,7 @@ export const SyllabusTracker: React.FC = () => {
                           {event.details || event.reason ? `"${event.details || event.reason}"` : '—'}
                         </td>
                         <td className="py-2.5 px-3 text-right font-mono-numbers">
-                          <span className="text-[11px] font-semibold text-emerald-600 bg-emerald-50/80 px-2 py-0.5 rounded">
+                          <span className="text-[11px] font-semibold text-lime-600 bg-lime-50/80 px-2 py-0.5 rounded">
                             {event.savedStatus}
                           </span>
                         </td>
@@ -1515,7 +1515,7 @@ export const SyllabusTracker: React.FC = () => {
       >
         {changeRequestTopic && (
           <form onSubmit={submitTopicChangeRequest}>
-            <div className="border-b border-rose-200 bg-rose-50/70 p-5">
+            <div className="border-b border-lime-200 bg-lime-50/70 p-5">
               <h2 className="text-sm font-bold text-slate-900">Request Schedule Change</h2>
               <p className="mt-1 text-xs text-slate-600">
                 {currentBatch?.batch} · Topic {String(changeRequestTopic.number).padStart(2, '0')}: {changeRequestTopic.title}
@@ -1576,7 +1576,7 @@ export const SyllabusTracker: React.FC = () => {
               </button>
               <button
                 type="submit"
-                className="rounded-lg bg-rose-900 px-4 py-2 text-xs font-bold text-white hover:bg-rose-800"
+                className="rounded-lg bg-lime-900 px-4 py-2 text-xs font-bold text-white hover:bg-lime-800"
               >
                 Submit Request
               </button>
@@ -1647,7 +1647,7 @@ export const SyllabusTracker: React.FC = () => {
       >
         {requestDetails && (
           <div>
-            <div className="border-b border-emerald-200 bg-emerald-50/70 p-5">
+            <div className="border-b border-lime-200 bg-lime-50/70 p-5">
               <h2 className="text-sm font-bold text-slate-900">Schedule Request · {requestDetails.status}</h2>
               <p className="mt-1 text-xs text-slate-600">
                 {requestDetails.batchName} · {requestDetails.moduleName} · {requestDetails.topicName} · {requestDetails.topicId}
@@ -1657,7 +1657,7 @@ export const SyllabusTracker: React.FC = () => {
               <div><dt className="text-slate-500">Original scheduled date</dt><dd className="mt-1 font-semibold text-slate-800">{formatReadableDate(requestDetails.originalScheduledDate)}</dd></div>
               <div><dt className="text-slate-500">Postpone from</dt><dd className="mt-1 font-semibold text-slate-800">{formatReadableDate(requestDetails.postponeFrom)}</dd></div>
               <div><dt className="text-slate-500">Postpone until</dt><dd className="mt-1 font-semibold text-slate-800">{formatReadableDate(requestDetails.postponeUntil)}</dd></div>
-              <div><dt className="text-slate-500">Rescheduled date</dt><dd className="mt-1 font-semibold text-emerald-700">{formatReadableDate(requestDetails.rescheduledDate)}</dd></div>
+              <div><dt className="text-slate-500">Rescheduled date</dt><dd className="mt-1 font-semibold text-lime-700">{formatReadableDate(requestDetails.rescheduledDate)}</dd></div>
               <div className="col-span-2"><dt className="text-slate-500">Reason</dt><dd className="mt-1 text-slate-800">{requestDetails.reason}</dd></div>
               <div className="col-span-2"><dt className="text-slate-500">Submitted</dt><dd className="mt-1 text-slate-800">{new Date(requestDetails.requestedAt).toLocaleString()}</dd></div>
             </dl>
@@ -1689,8 +1689,8 @@ export const SyllabusTracker: React.FC = () => {
         onClose={() => setIsFinanceSubmissionModalOpen(false)}
         ariaLabel="Confirm Finance module verification submission"
       >
-        <div className="flex items-start gap-3 border-b border-rose-200 bg-rose-50/70 p-5">
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-rose-100 text-rose-900">
+        <div className="flex items-start gap-3 border-b border-lime-200 bg-lime-50/70 p-5">
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-lime-100 text-lime-900">
             <Building2 className="h-5 w-5" />
           </span>
           <div>
@@ -1698,7 +1698,7 @@ export const SyllabusTracker: React.FC = () => {
             <p className="mt-1 text-xs leading-relaxed text-slate-600">
               You have successfully completed all topics in this module for this batch. Do you want to submit this module for Finance Department verification?
             </p>
-            <p className="mt-2 text-[11px] font-semibold text-rose-900">
+            <p className="mt-2 text-[11px] font-semibold text-lime-900">
               {module.name} · {currentBatch.batch} · {currentBatch.batchId || getScheduleBatchId(currentBatch)}
             </p>
           </div>
@@ -1714,7 +1714,7 @@ export const SyllabusTracker: React.FC = () => {
           <button
             type="button"
             onClick={handleFinanceSubmissionConfirm}
-            className="inline-flex items-center justify-center gap-2 rounded-lg bg-rose-900 px-4 py-2 text-xs font-bold text-white hover:bg-rose-800"
+            className="inline-flex items-center justify-center gap-2 rounded-lg bg-lime-900 px-4 py-2 text-xs font-bold text-white hover:bg-lime-800"
           >
             <Check className="h-4 w-4" />
             Confirm Submission

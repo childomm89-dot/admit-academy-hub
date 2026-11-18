@@ -30,7 +30,7 @@ export const StudentProfileModal: React.FC<StudentProfileModalProps> = ({ isOpen
       <div className="flex max-h-[calc(100dvh-2rem)] min-h-0 flex-col overflow-hidden bg-slate-100">
         <div className="flex items-start justify-between border-b border-slate-200 bg-white px-3 py-2">
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-rose-700">Student Profile</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-lime-700">Student Profile</p>
             <h3 className="mt-1 text-xl font-bold text-slate-900">{studentName}</h3>
             <p className="mt-0.5 text-sm font-mono text-slate-600">{studentId}</p>
           </div>
@@ -48,17 +48,17 @@ export const StudentProfileModal: React.FC<StudentProfileModalProps> = ({ isOpen
         <div className="min-h-0 flex-1 overflow-y-auto p-2">
           <div className="grid gap-2 lg:grid-cols-[260px_1fr]">
           <div className="rounded-2xl border border-slate-200 bg-white p-2 shadow-sm">
-            <div className="flex h-52 w-full items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-gradient-to-br from-rose-50 via-white to-slate-100">
+            <div className="flex h-52 w-full items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-gradient-to-br from-lime-50 via-white to-slate-100">
               {imageSrc ? (
                 <img src={imageSrc} alt={studentName} className="h-full w-full object-cover" />
               ) : (
-                <div className="flex h-28 w-28 items-center justify-center rounded-full bg-rose-100 text-4xl font-black text-rose-900">
+                <div className="flex h-28 w-28 items-center justify-center rounded-full bg-lime-100 text-4xl font-black text-lime-900">
                   {getStudentInitials(studentName)}
                 </div>
               )}
             </div>
-            <div className="mt-4 rounded-xl bg-rose-50 p-3 text-center">
-              <p className="text-[11px] uppercase tracking-wider text-rose-700">Admission No.</p>
+            <div className="mt-4 rounded-xl bg-lime-50 p-3 text-center">
+              <p className="text-[11px] uppercase tracking-wider text-lime-700">Admission No.</p>
               <p className="mt-1 text-lg font-black text-slate-900">{admissionNumber}</p>
             </div>
           </div>

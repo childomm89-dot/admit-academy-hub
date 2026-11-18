@@ -301,11 +301,11 @@ export const SessionHistory: React.FC = () => {
                       {/* Details / Reason */}
                       <td className="py-3 px-4 max-w-xs">
                         {session.missedReason ? (
-                          <span className="text-rose-700 italic truncate block">
+                          <span className="text-lime-700 italic truncate block">
                             "{session.missedReason}"
                           </span>
                         ) : session.completedTopicIds && session.completedTopicIds.length > 0 ? (
-                          <span className="text-emerald-700 font-mono-numbers font-medium">
+                          <span className="text-lime-700 font-mono-numbers font-medium">
                             {session.completedTopicIds.length} Topic(s) completed
                           </span>
                         ) : (

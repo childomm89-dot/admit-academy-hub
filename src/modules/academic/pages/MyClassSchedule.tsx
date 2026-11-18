@@ -151,7 +151,7 @@ export const MyClassSchedule: React.FC = () => {
             <span className="text-xs font-bold text-indigo-800 font-mono-numbers">
               {item.startTime} – {item.endTime}
             </span>
-            <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+            <span className="text-xs font-semibold text-lime-700 bg-lime-50 px-2 py-0.5 rounded border border-lime-200">
               {item.batch} · {item.approvalStatus}
             </span>
           </div>
@@ -394,7 +394,7 @@ export const MyClassSchedule: React.FC = () => {
                         {/* 6. Session: Displays 0/totalSessions & No classes conducted if unapproved or not started */}
                         <td className="py-3 px-3 whitespace-nowrap">
                           {isModuleCompleted ? (
-                            <div className="text-[11px] font-medium text-emerald-700">
+                            <div className="text-[11px] font-medium text-lime-700">
                               Module complete · no further classes
                             </div>
                           ) : completedSessions > 0 ? (
@@ -402,7 +402,7 @@ export const MyClassSchedule: React.FC = () => {
                               <div className="font-mono-numbers font-bold text-slate-900">
                                 {completedSessions} / {item.totalSessions}
                               </div>
-                              <div className="text-[11px] text-emerald-700 font-medium">
+                              <div className="text-[11px] text-lime-700 font-medium">
                                 {completedSessions} sessions conducted
                               </div>
                             </div>
@@ -433,8 +433,8 @@ export const MyClassSchedule: React.FC = () => {
                             <StatusBadge status={item.approvalStatus} size="sm" />
                             {isModuleCompleted && (
                               <div className="flex flex-wrap items-center gap-1">
-                                <span className="inline-flex items-center gap-1 rounded-md border border-emerald-200 bg-emerald-50 px-2 py-0.5 text-xs font-medium text-emerald-700">
-                                  <Check className="h-3.5 w-3.5 text-emerald-600" />
+                                <span className="inline-flex items-center gap-1 rounded-md border border-lime-200 bg-lime-50 px-2 py-0.5 text-xs font-medium text-lime-700">
+                                  <Check className="h-3.5 w-3.5 text-lime-600" />
                                   Class Completed
                                 </span>
                                 {scheduledExamination && (
@@ -443,7 +443,7 @@ export const MyClassSchedule: React.FC = () => {
                                     onClick={() => navigate({ to: '/academic/examinations', search: { exam: scheduledExamination.id } })}
                                     aria-label={`View examination schedule for ${item.batch} - ${item.moduleName}`}
                                     title={`View Admin-published examination ${scheduledExamination.id}`}
-                                    className="inline-flex items-center gap-1 rounded-md border border-rose-200 bg-rose-50 px-2 py-0.5 text-xs font-medium text-rose-900 transition-colors hover:bg-rose-100 hover:text-rose-950"
+                                    className="inline-flex items-center gap-1 rounded-md border border-lime-200 bg-lime-50 px-2 py-0.5 text-xs font-medium text-lime-900 transition-colors hover:bg-lime-100 hover:text-lime-950"
                                   >
                                     {completionStatus?.isExamCompleted ? 'Exam Completed' : 'Exam Scheduled'}
                                     {completionStatus?.isExamCompleted
@@ -492,7 +492,7 @@ export const MyClassSchedule: React.FC = () => {
                             {item.approvalStatus === 'Pending' && (
                               <button
                                 onClick={() => approveSchedule(item.id)}
-                                className="px-2.5 py-1 text-xs font-semibold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-lg transition-colors flex items-center gap-1 cursor-pointer shadow-2xs"
+                                className="px-2.5 py-1 text-xs font-semibold text-lime-700 bg-lime-50 hover:bg-lime-100 border border-lime-200 rounded-lg transition-colors flex items-center gap-1 cursor-pointer shadow-2xs"
                                 title="Approve batch schedule and unlock in Syllabus Tracker"
                               >
                                 <Check className="w-3.5 h-3.5" />

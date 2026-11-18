@@ -41,57 +41,45 @@ export const Header: React.FC = () => {
   const todayFormatted = formatReadableDate(getCurrentDateISO());
 
   return (
-    <header className="portal-header bg-white border-b border-slate-200 p-4 flex items-center justify-between">
-      {/* Left: Rolled-mat navigation trigger & page title */}
-      <div className="flex items-center gap-3 sm:gap-4 min-w-0">
-        <div className="min-w-0">
-          <div className="flex items-center gap-2">
-            <h1 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight truncate">
-              {title}
-            </h1>
-            <span className="hidden xl:inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-indigo-50 text-indigo-700 border border-indigo-200/60 truncate">
-              Advanced Python & Database Foundation
-            </span>
-          </div>
-          <p className="hidden md:block text-xs text-slate-500 truncate -mt-0.5">
-            {subtitle}
-          </p>
+    <header className="portal-header flex flex-wrap items-end justify-between gap-4 pb-5">
+      <div className="min-w-0">
+        <div className="flex flex-wrap items-center gap-2.5">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900">
+            {title}
+          </h2>
+          <span className="hidden md:inline-flex items-center rounded-full border border-lime-200 bg-lime-50 px-3 py-1 text-xs font-semibold text-lime-800">
+            Advanced Python & Database Foundation
+          </span>
         </div>
+        <p className="mt-1 text-sm text-slate-500">{subtitle}</p>
       </div>
 
-      {/* Right: Date, Reset, Notification, Profile */}
-      <div className="flex items-center gap-2 sm:gap-3.5 shrink-0">
-        {/* Live Academic Date */}
-        <div className="hidden sm:flex items-center gap-2 px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200 text-xs text-slate-600 font-mono-numbers">
-          <Calendar className="w-3.5 h-3.5 text-slate-400" />
+      <div className="flex items-center gap-2 shrink-0">
+        <div className="hidden sm:flex h-10 items-center gap-2 rounded-full border border-slate-200 px-4 text-sm text-slate-600 font-mono-numbers">
+          <Calendar className="w-4 h-4 text-slate-400" />
           <span>{todayFormatted}</span>
         </div>
-
-        {/* Reset Mock Data Button */}
         <button
           onClick={resetAllMockData}
           title="Reset local mock state to initial data"
-          className="p-2 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-100 transition-colors flex items-center gap-1.5 text-xs font-medium"
+          className="ghost-btn flex h-10 items-center gap-1.5 rounded-full px-4 text-sm font-semibold"
         >
-          <RotateCcw className="w-3.5 h-3.5" />
+          <RotateCcw className="w-4 h-4" />
           <span className="hidden lg:inline">Reset Mock Data</span>
         </button>
-
-        {/* Notification Bell */}
         <Link
           to="/academic/notifications"
-          className="relative p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+          className="glass-icon relative"
           aria-label="View notifications"
           title="Notifications"
         >
-          <Bell className="w-5 h-5" />
+          <Bell className="w-[18px] h-[18px]" />
           {activeRemindersCount > 0 && (
-            <span className="absolute top-1 right-1 w-4 h-4 rounded-full bg-rose-500 text-white text-[10px] font-bold flex items-center justify-center font-mono-numbers ring-2 ring-white">
+            <span className="absolute -top-0.5 -right-0.5 flex h-[18px] min-w-[18px] items-center justify-center rounded-full bg-salmon px-1 text-[10px] font-bold text-lime-foreground font-mono-numbers">
               {activeRemindersCount}
             </span>
           )}
         </Link>
-
       </div>
     </header>
   );
