@@ -1767,3 +1767,17 @@ nav a { transition: background .25s, color .25s, border-color .25s; }
   -webkit-backdrop-filter: blur(22px) saturate(140%);
   box-shadow: var(--shadow-card);
 }
+/* Wide data tables keep their compact size so every column fits */
+.solvik .academic-module :is(table.text-xs, table .text-xs) { font-size: 12px; }
+.solvik .academic-module table .text-\[11px\] { font-size: 11px; }
+/* Academic pop-up windows: solid dark glass so the page behind never shows through */
+.solvik .academic-module > .fixed.inset-0 {
+  background-color: oklch(0.12 0.01 160 / 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.solvik .academic-module [role="dialog"] {
+  background-color: var(--popover);
+  border-color: var(--glass-border);
+  border-radius: 26px;
+}
