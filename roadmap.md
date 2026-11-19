@@ -5,3 +5,12 @@
 - [x] Import admit-academy repo into this project
 - [x] Restyle shell + home dashboard after the Solvik reference (demo.codeandchill.store/solvik)
 - [x] Convert all module workspaces (Admin, Finance, Academic, Admission, Marketing, HR, Directors) to the dark glass colours
+- [ ] Fix the 65 open review comments (plan: .lovable/plan/fix-the-65-open-review-comments-2026-11-19.md)
+  - [ ] Round 1 quick renames/removals/look fixes
+  - [ ] Round 2 Administration
+  - [ ] Round 3 Academic
+  - [ ] Round 4 Finance
+  - [ ] Round 5 Save button, HR drop-downs, Directors dock, logo (logo waits on file from user)
+  - [ ] FC-4 / FC-6 wait on the team's decision
+- [ ] Role-based logins (Trainer sees only Academic) — on hold: user said "don't do role-based system now"
+- [ ] Real emails for credentials/agreements — not now; show as "ready to send"
